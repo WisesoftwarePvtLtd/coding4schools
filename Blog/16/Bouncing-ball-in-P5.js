@@ -1,0 +1,1059 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Coding First | Bouncing ball in P5.js </title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JH49K7C941"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JH49K7C941');
+</script>
+
+<style>
+    .CommonLoader{ position: fixed; top:0; left:0; right:0; bottom:0; background-color: rgba(255,255,255,0.95); z-index: 98; background-image: url("https://www.codingfirst.org/images/spinner.svg"); background-position: center; background-repeat: no-repeat; background-size: 150px; animation: FadeIn linear 0.3s; }
+    .CommonLoader2{ background-color: rgba(255,255,255,1) !important; z-index: 99999999  !important;; animation: FadeIn linear 0s  !important;; }
+</style>
+
+
+<link href="https://www.codingfirst.org/css/main.css?1764252135" rel="stylesheet" media="all">
+<link href="https://www.codingfirst.org/css/course_module.css?1764252135" rel="stylesheet" media="all">
+
+<script src="https://www.codingfirst.org/js/require.js/require.js" ></script>
+
+
+<meta name="theme-color" content="#000">
+<meta name="msapplication-navbutton-color" content="#000">
+<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://www.codingfirst.org/images/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.codingfirst.org/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.codingfirst.org/images/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.codingfirst.org/images/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://www.codingfirst.org/images/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.codingfirst.org/images/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://www.codingfirst.org/images/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.codingfirst.org/images/favicon/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="https://www.codingfirst.org/images/favicon/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://www.codingfirst.org/images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://www.codingfirst.org/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://www.codingfirst.org/images/favicon/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://www.codingfirst.org/images/favicon/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://www.codingfirst.org/images/favicon/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content=https://www.codingfirst.org/images/favicon/"mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://www.codingfirst.org/images/favicon/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="https://www.codingfirst.org/images/favicon/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="https://www.codingfirst.org/images/favicon/mstile-310x310.png" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TD552ZH');</script>
+<!-- End Google Tag Manager -->
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Bouncing ball,P5.js,Java processing,Coding for kids">
+    <meta name="description" content="          ">
+
+    <link href="https://www.codingfirst.org/Blog/16/Bouncing-ball-in-P5.js" rel="canonical">
+
+    <meta property="og:image" content="https://www.codingfirst.org/data/blog/16.png"/><meta property="og:type" content="article" /><meta property="og:title" content="Bouncing ball in P5.js"/><meta property="og:site_name" content="codingfirst.org"/><meta property="og:description" content="
+What is p5.js?
+p5. js is&amp;nbsp;a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!*
+
+Where can we code in p5.js?
+We can use the p5.js free editor at this link
+
+The basics of p..."/><meta property="og:url" content="https://www.codingfirst.org/Blog/16/Bouncing-ball-in-P5.js"/><meta name="twitter:card" content="summary" /><meta name="twitter:url" content="https://www.codingfirst.org/Blog/16/Bouncing-ball-in-P5.js"><meta name="twitter:title" content="Bouncing ball in P5.js"><meta name="twitter:description" content="
+What is p5.js?
+p5. js is&amp;nbsp;a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!*
+
+Where can we code in p5.js?
+We can use the p5.js free editor at this link
+
+The basics of p..."><meta name="twitter:image" content="https://www.codingfirst.org/data/blog/16.png">
+</head>
+
+<body>
+
+
+
+<div class="menu-marker"></div>
+<nav class="menu menu-desktop">
+    <div class="menu-sizer">
+        <a href="https://www.codingfirst.org" class="logo"><img src="https://www.codingfirst.org/images/Logo_cd.png">
+            <div class="name"> <span>codingFirst</span> </div>
+        </a>
+        <ul class="links">
+            <li><a class="scroll_to" href="https://www.codingfirst.org">Home <span class="underline"></span></a></li>
+            <li><a class="scroll_to" href="https://www.codingfirst.org/About">About Us  <span class="underline"></span></a></li>
+            <li><a class="scroll_to" href="https://www.codingfirst.org/Gallery">Gallery  <span class="underline"></span></a></li>
+
+            <li class="dropdown"><a id="course_dropdpwn" class="dropdown_menu " href="javascript:;">Courses
+                    <img src="https://www.codingfirst.org/images/arrow-down.svg" />
+                    <span class="underline"></span>
+                </a>
+                <div class="dropdown_list">
+                                        <div>
+                        <a data-attr="1"  class="course_level" href="javascript:;"><span>Primary</span>
+                            <i class="fas fa-caret-right"></i>
+                        </a>
+
+                        <ul class="dropdown_sub" id="sub_course_1">
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/4/Basics-of-block-programming-Scratch-Junior-Level-I">
+                                       Basics of block programming: Scratch Junior Level I</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/6/Game-Development-Basics-Scratch-Junior-Level-II">
+                                       Game Development Basics: Scratch Junior Level II</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/17/Introduction-to-Coding-Logic">
+                                       Introduction to Coding Logic</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/8/Basics-Of-Scratch">
+                                       Basics Of Scratch</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/9/Game-development-with-Scratch-Level-I">
+                                       Game development with Scratch: Level I</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/33/Game-development-with-Scratch-Level-II">
+                                       Game development with Scratch: Level II</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/10/Advanced-Game-Programming-With-Scratch-Level-III">
+                                       Advanced Game Programming With Scratch: Level III</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/23/Artificial-Intelligence-for-Juniors">
+                                       Artificial Intelligence for Juniors</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/28/Introduction-to-Mouse-Coding">
+                                       Introduction to Mouse Coding</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/29/Coding-with-Dash-and-Dot">
+                                       Coding with Dash and Dot</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/27/Introduction-to-Makey-Makey">
+                                       Introduction to Makey-Makey</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
+                                        <div>
+                        <a data-attr="2"  class="course_level" href="javascript:;"><span>Middle School</span>
+                            <i class="fas fa-caret-right"></i>
+                        </a>
+
+                        <ul class="dropdown_sub" id="sub_course_2">
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/11/Introduction-to-Creative-Computing-P5-js-Level-I">
+                                       Introduction to Creative Computing: P5.js Level I</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/12/Game-Programming-in-P5-js-Level-II">
+                                       Game Programming in P5.js: Level II</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/13/Introduction-to-Web-Development-with-HTML-and-CSS-Level-I">
+                                       Introduction to Web Development with HTML and CSS: Level I</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/14/Web-development-with-JavaScript">
+                                       Web development with JavaScript</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/20/3D-Design-Level-I">
+                                       3D Design: Level I</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/21/Advanced-3D-Design-Level-II">
+                                       Advanced 3D Design: Level II</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/24/Introduction-to-mBot-Robotics">
+                                       Introduction to mBot Robotics</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/30/Introduction-to-Micro-Bit">
+                                       Introduction to Micro:Bit</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/31/Micro-Bit-Programming-in-JS">
+                                       Micro:Bit Programming in JS</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
+                                        <div>
+                        <a data-attr="3"  class="course_level" href="javascript:;"><span>High School</span>
+                            <i class="fas fa-caret-right"></i>
+                        </a>
+
+                        <ul class="dropdown_sub" id="sub_course_3">
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/15/Introduction-to-Python-Level-I">
+                                       Introduction to Python: Level I</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/16/Advanced-concepts-in-Python-Level-II">
+                                       Advanced concepts in Python: Level II</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/26/Introduction-to-Data-Analytics">
+                                       Introduction to Data Analytics</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/34/Introduction-to-Artificial-Intelligence">
+                                       Introduction to Artificial Intelligence</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/18/Game-Development-With-JavaScript">
+                                       Game Development With JavaScript</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/25/Introduction-to-Virtual-Reality">
+                                       Introduction to Virtual Reality</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/22/Arduino-Electronics-Programming-Level-I">
+                                       Arduino Electronics Programming Level I</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.codingfirst.org/Course/32/Advanced-Arduino-Programming">
+                                       Advanced Arduino Programming</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
+                    
+                </div>
+            </li>
+
+
+            <li><a class="scroll_to" href="https://www.codingfirst.org/Teachers">Teachers  <span class="underline"></span></a></li>
+            <li><a class="scroll_to" href="https://www.codingfirst.org/Schools">Schools  <span class="underline"></span></a></li>
+            <li><a class="scroll_to" href="https://www.codingfirst.org/Blog">Blog  <span class="underline"></span></a></li>
+            <li><a class="scroll_to" href="https://www.codingfirst.org/#.SectionFooter">Contact us  <span class="underline"></span></a></li>
+
+                            <li class="users"><a href="https://www.codingfirst.org/Login"><span>Login</span></a></li>
+            
+        </ul>
+
+    </div>
+</nav>
+
+
+<nav class="menu-mobile">
+    <div class="menu-mobile-container">
+        <div class="logo-wrap-mobile">
+            <a href="https://www.codingfirst.org">
+                <img src="https://www.codingfirst.org/images/Logo_cd.png" class="img-fluid">
+            </a>
+        </div>
+        <div class="disclaimer">
+            For the best experience, we recommend accessing this website on a laptop or PC using google chrome.
+        </div>
+        <a href="javascript:;" class="main-nav-mobile-link"><i class="fas fa-bars"></i></a>
+
+        <ul class="menu-mobile-ul">
+            <li><a href="https://www.codingfirst.org" class="MobileMenuItem scroll_to">Homepage</a></li>
+
+
+            <li><a href="https://www.codingfirst.org/About" class="MobileMenuItem scroll_to">About Us</a></li>
+            <li><a href="https://www.codingfirst.org/Gallery" class="MobileMenuItem scroll_to">Gallery</a></li>
+            <li class="mobile-dropdown"><a href="javascript:;" class="MobileMenuItem scroll_to">Courses  <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown_list_menu">
+                                            <div>
+                            <a data-attr="1"  class="course_level_mobile" href="javascript:;"><span>Primary</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+
+                            <ul class="dropdown_sub" id="sub_mobile_course_1">
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/4/Basics-of-block-programming-Scratch-Junior-Level-I">
+                                            Basics of block programming: Scratch Junior Level I</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/6/Game-Development-Basics-Scratch-Junior-Level-II">
+                                            Game Development Basics: Scratch Junior Level II</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/8/Basics-Of-Scratch">
+                                            Basics Of Scratch</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/9/Game-development-with-Scratch-Level-I">
+                                            Game development with Scratch: Level I</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/10/Advanced-Game-Programming-With-Scratch-Level-III">
+                                            Advanced Game Programming With Scratch: Level III</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/17/Introduction-to-Coding-Logic">
+                                            Introduction to Coding Logic</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/23/Artificial-Intelligence-for-Juniors">
+                                            Artificial Intelligence for Juniors</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/27/Introduction-to-Makey-Makey">
+                                            Introduction to Makey-Makey</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/28/Introduction-to-Mouse-Coding">
+                                            Introduction to Mouse Coding</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/29/Coding-with-Dash-and-Dot">
+                                            Coding with Dash and Dot</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/33/Game-development-with-Scratch-Level-II">
+                                            Game development with Scratch: Level II</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                                            <div>
+                            <a data-attr="2"  class="course_level_mobile" href="javascript:;"><span>Middle School</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+
+                            <ul class="dropdown_sub" id="sub_mobile_course_2">
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/11/Introduction-to-Creative-Computing-P5-js-Level-I">
+                                            Introduction to Creative Computing: P5.js Level I</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/12/Game-Programming-in-P5-js-Level-II">
+                                            Game Programming in P5.js: Level II</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/13/Introduction-to-Web-Development-with-HTML-and-CSS-Level-I">
+                                            Introduction to Web Development with HTML and CSS: Level I</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/14/Web-development-with-JavaScript">
+                                            Web development with JavaScript</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/20/3D-Design-Level-I">
+                                            3D Design: Level I</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/21/Advanced-3D-Design-Level-II">
+                                            Advanced 3D Design: Level II</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/24/Introduction-to-mBot-Robotics">
+                                            Introduction to mBot Robotics</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/30/Introduction-to-Micro-Bit">
+                                            Introduction to Micro:Bit</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/31/Micro-Bit-Programming-in-JS">
+                                            Micro:Bit Programming in JS</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                                            <div>
+                            <a data-attr="3"  class="course_level_mobile" href="javascript:;"><span>High School</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+
+                            <ul class="dropdown_sub" id="sub_mobile_course_3">
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/15/Introduction-to-Python-Level-I">
+                                            Introduction to Python: Level I</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/16/Advanced-concepts-in-Python-Level-II">
+                                            Advanced concepts in Python: Level II</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/18/Game-Development-With-JavaScript">
+                                            Game Development With JavaScript</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/22/Arduino-Electronics-Programming-Level-I">
+                                            Arduino Electronics Programming Level I</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/25/Introduction-to-Virtual-Reality">
+                                            Introduction to Virtual Reality</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/26/Introduction-to-Data-Analytics">
+                                            Introduction to Data Analytics</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/32/Advanced-Arduino-Programming">
+                                            Advanced Arduino Programming</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.codingfirst.org/Course/34/Introduction-to-Artificial-Intelligence">
+                                            Introduction to Artificial Intelligence</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                    
+                </div>
+            </li>
+            <li><a href="https://www.codingfirst.org/Teachers" class="MobileMenuItem ">Teachers</a></li>
+            <li><a href="https://www.codingfirst.org/Schools" class="MobileMenuItem ">Schools</a></li>
+            <li><a href="https://www.codingfirst.org/Blog" class="MobileMenuItem ">Blog</a></li>
+
+            <li><a href="https://www.codingfirst.org#.SectionFooter" class="MobileMenuItem scroll_to">Contact us</a></li>
+
+                            <li><a class="MobileMenuItem" href="https://www.codingfirst.org/login.php"><span><i class="fas fa-user"></i></span>Login</a></li>
+
+            
+
+        </ul>
+
+    </div>
+</nav>
+
+<script language="javascript">
+
+    function HeaderFunctions(){
+        $(document).ready(function(){
+
+            $('#course_dropdpwn').click(function(){
+                $('.dropdown_list').toggleClass('show_dd_menu');
+            });
+
+            $('.course_level').click(function(){
+                $(".course_level").removeClass('selected');
+                $(this).toggleClass('selected');
+                event.stopPropagation();
+
+                var attr = $(this).attr('data-attr');
+                $(".course_level").not(this).parent().find('.dropdown_sub').removeClass('show_dd_sub_menu');
+                // $(".dropdown_sub").not(this).removeClass('show_dd_sub_menu');
+
+                $('#sub_course_'+attr).toggleClass('show_dd_sub_menu');
+
+            });
+
+
+
+            $('.course_level_mobile').click(function(){
+                $(".course_level_mobile").removeClass('selected');
+                $(this).toggleClass('selected');
+                event.stopPropagation();
+
+                var attr = $(this).attr('data-attr');
+                $(".course_level_mobile").not(this).parent().find('.dropdown_sub').removeClass('show_dd_sub_menu');
+
+                $('#sub_mobile_course_'+attr).toggleClass('show_dd_sub_menu');
+
+            });
+
+
+
+
+            $('#notification').click(function(event){
+                event.stopPropagation();
+                $(".dropdown_notifications").slideToggle();
+            });
+
+            $('.notification_item').on('click', function () {
+
+
+                var notification_id = $(this).attr('data-attr');
+                var redirect = $(this).attr('data-link');
+
+
+                console.log(notification_id);
+
+                $.ajax({
+                    method: "POST",
+                    url: 'read_notification.php',
+                    data: { id: notification_id },
+                    success: function(data){
+                        console.log(data);
+                    }
+                });
+
+                $(this).removeClass('not-read');
+                window.location=redirect;
+
+
+            });
+
+
+        });
+
+
+
+
+
+
+
+    }
+
+
+
+</script>
+
+
+
+
+<div class="gray-section">
+    <div class="row p-80">
+        <div class="blogPage p-80 m-50">
+          <div class="page-grid-50">
+              <div class="left">
+
+                  <h1>Bouncing ball in P5.js</h1>
+
+                  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                  <div class="addthis_inline_share_toolbox_fz01"></div>
+
+                  <div class="date"> August 09, 2021</div>
+
+
+                  <div class="text">
+                      <p><br /><br />
+<span style="font-size:16px"><strong>What is p5.js?</strong><br /><br />
+p5. js is&nbsp;a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!*</span></p><br />
+<br />
+<p><span style="font-size:16px"><strong>Where can we code in p5.js?</strong><br /><br />
+We can use the p5.js free editor at this <a href="https://editor.p5js.org" target="_blank"><span style="color:#ffffff"><span style="background-color:#3366cc">link</span></span></a></span></p><br />
+<br />
+<p><span style="font-size:16px"><strong>The basics of p5.js?</strong></span><br /><br />
+<span style="font-size:medium">P5.js has 2 main built-in functions: setup() and draw(). They are represented as it follows.</span></p><br />
+<br />
+<p><span style="color:#3366ff">function setup() {&nbsp;<br /><br />
+}<br /><br />
+function draw() {<br /><br />
+}</span></p><br />
+<br />
+<p><span style="font-size:medium">The setup() function is called only once.</span><br /><br />
+<span style="font-size:medium">The draw() function is called over and over again until the program is manually stopped.&nbsp;</span></p><br />
+<br />
+<p><span style="font-size:16px"><strong>How can we program a bouncing ball in p5.js?</strong><br /><br />
+Step 1: </span><span style="font-size:medium">Create a 400x400 pixels&nbsp;canvas&nbsp;in the setup function.&nbsp;</span><br /><br />
+<span style="color:#3366ff">function setup() {&nbsp;<br /><br />
+&nbsp; &nbsp; createCanvas(400, 400);<br /><br />
+}</span><br /><br />
+<span style="font-size:16px">Step 2: </span><span style="font-size:medium">Define the initial&nbsp;positions of the ball by declaring 2 variables&nbsp;before the setup function.&nbsp;</span></p><br />
+<br />
+<p><span style="color:#3366ff">let x=200;<br /><br />
+let y=0;</span>&nbsp;</p><br />
+<br />
+<p><span style="color:#3366ff">function setup() {&nbsp;<br /><br />
+&nbsp; &nbsp; createCanvas(400, 400);<br /><br />
+}</span><br /><br />
+<span style="font-size:16px">Step 3: </span><span style="font-size:medium">Draw your background in the draw function and create black&nbsp;a circle of 30 pixels radius at the positions defined in Step 2.</span><br /><br />
+<span style="color:#3366ff">let x=200;<br /><br />
+let y=0;</span>&nbsp;</p><br />
+<br />
+<p><span style="color:#3366ff">function setup() {&nbsp;<br /><br />
+&nbsp; &nbsp; createCanvas(400, 400);<br /><br />
+}</span></p><br />
+<br />
+<p><span style="color:#3366ff">function draw(){<br /><br />
+&nbsp; &nbsp; background(220);<br /><br />
+&nbsp; &nbsp; fill(0);<br /><br />
+&nbsp;&nbsp; &nbsp;ellipse(x, y, 30);<br /><br />
+}</span></p><br />
+<br />
+<p><span style="font-size:16px">Step 4: Declare a variable&nbsp;to control&nbsp;the speed of the ball along the vertical and change the y position of the ball in the draw function by the speed you defined.&nbsp;</span><br /><br />
+<span style="color:#3366ff">let x=200;<br /><br />
+let y=0;</span>&nbsp;<br /><br />
+<span style="color:#3366ff">let yspeed=10;</span>&nbsp;</p><br />
+<br />
+<p><span style="color:#3366ff">function setup() {&nbsp;<br /><br />
+&nbsp; &nbsp; createCanvas(400, 400);<br /><br />
+}<br /><br />
+function draw(){<br /><br />
+&nbsp; &nbsp; background(220);<br /><br />
+&nbsp; &nbsp; fill(0);<br /><br />
+&nbsp;&nbsp; &nbsp;ellipse(x, y, 30);<br /><br />
+&nbsp;&nbsp; &nbsp;y=y+yspeed;<br /><br />
+}</span></p><br />
+<br />
+<p><span style="font-size:16px">Step 5: Check if the ball is touching the upper or lower boundaries of your canvas and change its direction by adding a negative sign to the speed variable.&nbsp;</span><br /><br />
+<span style="color:#3366ff">let x=200;<br /><br />
+let y=0;</span>&nbsp;<br /><br />
+<span style="color:#3366ff">let yspeed=10;</span>&nbsp;</p><br />
+<br />
+<p><span style="color:#3366ff">function setup() {&nbsp;<br /><br />
+&nbsp; &nbsp; createCanvas(400, 400);<br /><br />
+}</span></p><br />
+<br />
+<p><span style="color:#3366ff">function draw(){<br /><br />
+&nbsp; &nbsp; background(220);<br /><br />
+&nbsp; &nbsp; fill(0);<br /><br />
+&nbsp;&nbsp; &nbsp;ellipse(x, y, 30);<br /><br />
+&nbsp;&nbsp; &nbsp;y=y+yspeed;<br /><br />
+&nbsp; &nbsp; if(y&gt;height || y&lt;0) {<br /><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;yspeed = -yspeed;&nbsp;<br /><br />
+&nbsp; &nbsp;&nbsp;}<br /><br />
+}</span></p><br />
+<br />
+<p><span style="font-size:16px">*&nbsp;</span><a href="https://p5js.prg"><cite>https://p5js.org</cite></a></p><br />
+                  </div>
+
+
+              </div>
+
+              <div class="right">
+                   
+                      <a class="blog-image" data-fancybox="gallery" data-caption="Bouncing ball in P5.js" href="https://www.codingfirst.org/data/blog/16.png"  >
+                          <img style="width: 100%;margin-bottom: 10px;" alt="Bouncing ball in P5.js" src="https://www.codingfirst.org/data/blog/16.png">
+                      </a>
+
+                      <div class="blog-gallery">
+                                                </div>
+
+                                </div>
+          </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="footer SectionFooter">
+    <div class="footerContent">
+
+        <div class="row">
+
+
+            <div class="footer-col-first">
+                <h3 class="secondary-title white">Features </h3>
+                <div class="FooterLinks">
+                    <a href="https://www.codingfirst.org"><i class="fas fa-chevron-right"></i> Home page</a>
+                    <a href="https://www.codingfirst.org/About"><i class="fas fa-chevron-right"></i> About Us</a>
+                    <a href="https://www.codingfirst.org/Schools"><i class="fas fa-chevron-right"></i> Schools</a>
+                    <a href="https://www.codingfirst.org/Login"><i class="fas fa-chevron-right"></i> Log In</a>
+                    <a href="https://www.codingfirst.org/Privacy"><i class="fas fa-chevron-right"></i> Privacy</a>
+                    <a href="https://www.codingfirst.org/Terms"><i class="fas fa-chevron-right"></i>  Terms</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+
+                <h3 class="secondary-title white">Our Courses </h3>
+                <div class="FooterLinks">
+                    <a href="https://www.codingfirst.org/Introduction-To-Programming"><i class="fas fa-chevron-right"></i> Introduction to Programming</a>
+                    <a href="https://www.codingfirst.org/Programming-Games-with-scratch"><i class="fas fa-chevron-right"></i> Programming Games with Scratch</a>
+                    <a href="https://www.codingfirst.org/Introduction-to-programming-with-syntax"><i class="fas fa-chevron-right"></i> Introduction to programming with Syntax</a>
+                    <a href="https://www.codingfirst.org/Programming-real-life-projects"><i class="fas fa-chevron-right"></i> Programming real life projects</a>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="footer-col">
+                <h3 class="secondary-title white">Contact Us </h3>
+                <div class="FooterLinks">
+
+                    <a style="text-transform: lowercase;font-size: 16px;font-weight: 500" href="mailto:info@codingfirst.org">info@codingfirst.org</a>
+
+
+                </div>
+            </div>
+
+         </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+    <div class="trademark"><i class="far fa-registered"></i> Coding First Education Technology FZE <br>
+    </div>>
+
+    </div>
+</div>
+<script language="javascript">
+    function FooterFunctionsCommon(){
+        
+             function disableSelection(target){
+            if (typeof target.onselectstart!="undefined") //For IE
+                target.onselectstart=function(){return false}
+            else if (typeof target.style.MozUserSelect!="undefined") //For Firefox
+                target.style.MozUserSelect="none"
+            else //All other route (For Opera)
+                target.onmousedown=function(){return false}
+            target.style.cursor = "default"
+        }
+
+        disableSelection(document.body)
+        
+          // Screenshot detection
+        function logScreenshot(type) {
+            $.ajax({
+                url: 'https://www.codingfirst.org/log_screenshot.php',
+                type: 'POST',
+                data: {
+                    pagelink: window.location.href,
+                    type: type,
+                    device: navigator.userAgent
+                },
+                success: function(response) {
+                    console.log('Screenshot logged');
+                }
+            });
+        }
+
+      // Track Cmd+Shift detection with debounce
+        var lastCmdShiftTime = 0;
+        var cmdShiftDebounce = 2000; // 2 seconds cooldown
+        
+        // Detect keyboard shortcuts for screenshots
+        document.addEventListener('keydown', function(e) {
+            console.log('Key:', e.key, 'Meta:', e.metaKey, 'Shift:', e.shiftKey, 'Ctrl:', e.ctrlKey);
+            
+            // Mac: Detect Cmd+Shift (workaround since full shortcut is blocked by OS)
+            if (e.metaKey && e.shiftKey && e.key === 'Shift') {
+                var now = Date.now();
+                if (now - lastCmdShiftTime > cmdShiftDebounce) {
+                    console.log('Cmd+Shift detected - possible screenshot attempt');
+                    logScreenshot('Mac - Cmd+Shift Detected (Possible Screenshot)');
+                    lastCmdShiftTime = now;
+                }
+            }
+            
+            // Mac: If somehow the number gets through (unlikely but worth trying)
+            if (e.metaKey && e.shiftKey && (e.key === '3' || e.key === '4' || e.key === '5')) {
+                console.log('Full Mac screenshot shortcut detected!');
+                logScreenshot('Mac Screenshot (Cmd+Shift+' + e.key + ')');
+            }
+            
+            // Windows: PrtScn, Alt+PrtScn, Win+Shift+S
+            if (e.key === 'PrintScreen') {
+                if (e.altKey) {
+                    logScreenshot('Windows Screenshot (Alt+PrtScn)');
+                } else if (e.metaKey && e.shiftKey) {
+                    logScreenshot('Windows Screenshot (Win+Shift+S)');
+                } else {
+                    logScreenshot('Windows Screenshot (PrtScn)');
+                }
+            }
+        });
+
+      
+
+
+
+    }
+
+</script>
+
+
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+    
+    
+        window.addEventListener("keydown", checkKeyPress, false);
+    function checkKeyPress(key) {
+
+       if((event.ctrlKey || event.metaKey) && key.keyCode == "73") {
+            event.preventDefault();
+            return false;
+        }
+
+        else if((event.ctrlKey || event.metaKey) && (key.keyCode == "73" || key.keyCode == "74" )) {
+            event.preventDefault();
+            return false;
+        }
+
+        else if(event.ctrlKey && event.shiftKey && (key.keyCode == "73" || key.keyCode == "74" ))
+        {
+            event.preventDefault();
+            return false;
+        }
+
+
+
+    }
+    
+</script>
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD552ZH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script language="javascript">
+
+    function AlertsFunctions() {
+
+        $('[data-fancybox="gallery"]').fancybox({
+            animationEffect : false,
+            clickContent    : false,
+            buttons : [
+                'download',
+                'thumbs',
+                'close'
+            ]
+        });
+
+    }
+</script>
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d80a331849e60dd"></script>
+
+<script language="javascript">
+    function FooterFunctions(){
+
+        var title = 'Bouncing ball in P5.js';
+        var link = 'https://www.codingfirst.org/Blog/16/Bouncing-ball-in-P5.js';
+        var imgUrl = 'https://www.codingfirst.org/data/blog/16.png';
+        var description = '<p><br />
+<span style="font-size:16px"><strong>What is p5.js?</strong><br />
+p5. js is&nbsp;a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!*</span></p>
+
+<p><span style="font-size:16px"><strong>Where can we code in p5.js?</strong><br />
+We can use the p5.js free editor at this <a href="https://editor.p5js.org" target="_blank"><span style="color:#ffffff"><span style="background-color:#3366cc">link</span></span></a></span></p>
+
+<p><span style="font-size:16px"><strong>The basics of p5.js?</strong></span><br />
+<span style="font-size:medium">P5.js has 2 main built-in functions: setup() and draw(). They are represented as it follows.</span></p>
+
+<p><span style="color:#3366ff">function setup() {&nbsp;<br />
+}<br />
+function draw() {<br />
+}</span></p>
+
+<p><span style="font-size:medium">The setup() function is called only once.</span><br />
+<span style="font-size:medium">The draw() function is called over and over again until the program is manually stopped.&nbsp;</span></p>
+
+<p><span style="font-size:16px"><strong>How can we program a bouncing ball in p5.js?</strong><br />
+Step 1: </span><span style="font-size:medium">Create a 400x400 pixels&nbsp;canvas&nbsp;in the setup function.&nbsp;</span><br />
+<span style="color:#3366ff">function setup() {&nbsp;<br />
+&nbsp; &nbsp; createCanvas(400, 400);<br />
+}</span><br />
+<span style="font-size:16px">Step 2: </span><span style="font-size:medium">Define the initial&nbsp;positions of the ball by declaring 2 variables&nbsp;before the setup function.&nbsp;</span></p>
+
+<p><span style="color:#3366ff">let x=200;<br />
+let y=0;</span>&nbsp;</p>
+
+<p><span style="color:#3366ff">function setup() {&nbsp;<br />
+&nbsp; &nbsp; createCanvas(400, 400);<br />
+}</span><br />
+<span style="font-size:16px">Step 3: </span><span style="font-size:medium">Draw your background in the draw function and create black&nbsp;a circle of 30 pixels radius at the positions defined in Step 2.</span><br />
+<span style="color:#3366ff">let x=200;<br />
+let y=0;</span>&nbsp;</p>
+
+<p><span style="color:#3366ff">function setup() {&nbsp;<br />
+&nbsp; &nbsp; createCanvas(400, 400);<br />
+}</span></p>
+
+<p><span style="color:#3366ff">function draw(){<br />
+&nbsp; &nbsp; background(220);<br />
+&nbsp; &nbsp; fill(0);<br />
+&nbsp;&nbsp; &nbsp;ellipse(x, y, 30);<br />
+}</span></p>
+
+<p><span style="font-size:16px">Step 4: Declare a variable&nbsp;to control&nbsp;the speed of the ball along the vertical and change the y position of the ball in the draw function by the speed you defined.&nbsp;</span><br />
+<span style="color:#3366ff">let x=200;<br />
+let y=0;</span>&nbsp;<br />
+<span style="color:#3366ff">let yspeed=10;</span>&nbsp;</p>
+
+<p><span style="color:#3366ff">function setup() {&nbsp;<br />
+&nbsp; &nbsp; createCanvas(400, 400);<br />
+}<br />
+function draw(){<br />
+&nbsp; &nbsp; background(220);<br />
+&nbsp; &nbsp; fill(0);<br />
+&nbsp;&nbsp; &nbsp;ellipse(x, y, 30);<br />
+&nbsp;&nbsp; &nbsp;y=y+yspeed;<br />
+}</span></p>
+
+<p><span style="font-size:16px">Step 5: Check if the ball is touching the upper or lower boundaries of your canvas and change its direction by adding a negative sign to the speed variable.&nbsp;</span><br />
+<span style="color:#3366ff">let x=200;<br />
+let y=0;</span>&nbsp;<br />
+<span style="color:#3366ff">let yspeed=10;</span>&nbsp;</p>
+
+<p><span style="color:#3366ff">function setup() {&nbsp;<br />
+&nbsp; &nbsp; createCanvas(400, 400);<br />
+}</span></p>
+
+<p><span style="color:#3366ff">function draw(){<br />
+&nbsp; &nbsp; background(220);<br />
+&nbsp; &nbsp; fill(0);<br />
+&nbsp;&nbsp; &nbsp;ellipse(x, y, 30);<br />
+&nbsp;&nbsp; &nbsp;y=y+yspeed;<br />
+&nbsp; &nbsp; if(y&gt;height || y&lt;0) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;yspeed = -yspeed;&nbsp;<br />
+&nbsp; &nbsp;&nbsp;}<br />
+}</span></p>
+
+<p><span style="font-size:16px">*&nbsp;</span><a href="https://p5js.prg"><cite>https://p5js.org</cite></a></p>
+';
+
+        wx.config({
+            // Configurations such as obtaining signatures from the background
+            debug: false,
+            appId: '',
+            nonceStr: '',
+            timestamp: '',
+            signature: '',
+            // Setting up the api to be invoked
+            jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo',
+                'onMenuShareQZone'
+            ]
+        });
+
+        wx.ready(function () {
+            wx.onMenuShareTimeline({
+                // Share titles
+                title: title,
+                // Sharing links
+                link: link,
+                // Sharing icons
+                imgUrl: imgUrl,
+                success: function () {},
+                cancel: function () {}
+            });
+            wx.onMenuShareAppMessage({
+                // Share titles
+                title: title,
+                // Sharing Description
+                desc: description,
+                // Sharing links
+                link: link,
+                // Sharing icons
+                imgUrl: imgUrl,
+                success: function () {},
+                cancel: function () {}
+            });
+            wx.onMenuShareQQ({
+                // Share titles
+                title: title,
+                // Sharing Description
+                desc: description,
+                // Sharing links
+                link: link,
+                imgUrl: imgUrl,
+                success: function () {},
+                cancel: function () {}
+            });
+            wx.onMenuShareQZone({
+                // Share titles
+                title: title,
+                // Sharing Description
+                desc: description,
+                // Sharing links
+                link: link,
+                imgUrl: imgUrl,
+                success: function () {},
+                cancel: function () {}
+            });
+            wx.onMenuShareWeibo({
+                // Share titles
+                title: title,
+                // Sharing Description
+                desc: description,
+                // Sharing links
+                link: link,
+                imgUrl: imgUrl,
+                success: function () {},
+                cancel: function () {}
+            });
+        });
+
+        // Sharing to friends changes to
+        wx.ready(function () {   //Call before the user may click the Share button
+            wx.updateAppMessageShareData({
+                title: title,
+                desc: description,
+                link: link, // Share links. The link domain name or path must be the same as the public number JS secure domain name corresponding to the current page.
+                imgUrl: imgUrl, // Sharing icons
+                success: function () {
+                    // Successful setup
+                }
+            })
+        });
+
+        // Sharing in Friendship Circle and Sharing in qq Spatial Change to ___________
+        wx.ready(function () {      //Call before the user may click the Share button
+            wx.updateTimelineShareData({
+                title: title, // Share titles
+                link: link, // Share links. The link domain name or path must be the same as the public number JS secure domain name corresponding to the current page.
+                imgUrl: imgUrl, // Sharing icons
+                success: function () {
+                    // Successful setup
+                }
+            })
+        });
+
+
+    }
+</script>
+
+
+
+</body>
+

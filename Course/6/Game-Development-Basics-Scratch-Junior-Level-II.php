@@ -1,0 +1,455 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Coding4Schools</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="../../gtag/js.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JH49K7C941');
+</script>
+
+<style>
+    .CommonLoader{ position: fixed; top:0; left:0; right:0; bottom:0; background-color: rgba(255,255,255,0.95); z-index: 98; background-image: url("images/spinner.svg"); background-position: center; background-repeat: no-repeat; background-size: 150px; animation: FadeIn linear 0.3s; }
+    .CommonLoader2{ background-color: rgba(255,255,255,1) !important; z-index: 99999999  !important;; animation: FadeIn linear 0s  !important;; }
+</style>
+
+
+<link href="../../css/main.css?1764142620" rel="stylesheet" media="all">
+<link href="../../css/course_module.css?1764142620" rel="stylesheet" media="all">
+
+<script src="../../js/require.js/require.js" ></script>
+
+
+<meta name="theme-color" content="#000">
+<meta name="msapplication-navbutton-color" content="#000">
+<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../images/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="../../images/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../images/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../images/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../images/favicon/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="../../images/favicon/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="../../images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="../../images/favicon/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="../../images/favicon/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="../../images/favicon/"mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="../../images/favicon/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="../../images/favicon/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="../../images/favicon/mstile-310x310.png" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+''+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TD552ZH');</script>
+<!-- End Google Tag Manager -->
+
+<script src="../../recaptcha/api.js" async defer></script>
+
+
+    <meta name="robots" content="all, index, follow" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="index.php" rel="canonical">
+
+</head>
+
+
+<body>
+
+
+
+<?php
+include '../../header.php';
+?>
+
+<div class="p-relative">
+
+
+<div class="cp_background_course">
+
+        <div class="course-grid">
+            <div class="course-info">
+
+                                    <div class="new">New</div>
+                                <div class="course-name">Game Development Basics: Scratch Junior Level II</div>
+                <div class="course-brief">    In this course, students advance the skills acquired from ScratchJr Level I by leveraging the ScratchJr programming platform. They develop intricate games featuring multiple sprites and backgrounds. Advanced programming principles such as conditionals, loops, and message broadcasting are heavily applied. The emphasis is on integrating diverse programming concepts to craft sophisticated games and animations. This course seamlessly builds upon the foundation laid in the previous one, integrating all learned programming concepts to produce more refined projects.</div>
+                <div class="sep"></div>
+                <div class="sep"></div>
+                <a target="_blank" href="data/ts_course_syllabus/6.pdf" class="button">View Syllabus</a>
+
+                                  <a href="Register.php" class="button3 ">Join For Free</a>
+
+               
+                                    <a href="CoursePlan/6.php" class="button2 ">Get This course</a>
+
+                
+
+            </div>
+
+        </div>
+
+    <picture style="background-image: url('images/course_bg_img4.png')"></picture>
+
+
+
+</div>
+
+<div class="course-highlight">
+    <div class="course-img">
+        <img src="data/course_package/6.png">
+
+    </div>
+
+    <div class="highlight-content">
+        <h2>Overview & Highlights</h2>
+
+        <div class="overview-list">
+            <div class="overview-detail">
+                <span class="header">Level</span>
+                 <div class="sep2"></div>
+                <span class="detail">Primary</span>
+            </div>
+
+            <div class="overview-detail">
+                <span class="header">Grades</span>
+                <div class="sep2"></div>
+                <span class="detail">grade 1-3</span>
+            </div>
+
+            <div class="overview-detail">
+                <span class="header">Duration</span>
+                <div class="sep2"></div>
+                <span class="detail">20 hours</span>
+            </div>
+
+
+            <div class="overview-detail">
+                <span class="header">Timeframe</span>
+                <div class="sep2"></div>
+                <span class="detail">Semester</span>
+            </div>
+
+            <div class="overview-detail">
+                <span class="header">Prerequisite</span>
+                <div class="sep2"></div>
+                <span class="detail">
+                    Basics of block programming: Scratch Junior Level I                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+<div class="course-overview">
+
+    <div class="col-100">
+        <div class="main-title-black text-center">
+            Course Overview
+        </div>
+        <div class="sep"></div>
+
+        <div class="course-overview-section">
+
+            
+                <div class="overview-item" >
+                    <span>1</span>
+                    <div class="overview-info">
+                        <div>Introduction to Game Development</div>
+                        <div>Introduction to game development concepts using Scratch Junior. Students will start by reviewing key programming elements from Level I and begin working on more interactive projects that involve multiple sprites and backgrounds.</div>
+                    </div>
+
+                </div>
+
+
+          
+                <div class="overview-item" >
+                    <span>2</span>
+                    <div class="overview-info">
+                        <div>Player and Object Interactions</div>
+                        <div>Learn how to create games where the player interacts with objects, using blocks to detect touches or collisions between sprites, adding layers of complexity to the game experience.</div>
+                    </div>
+
+                </div>
+
+
+          
+                <div class="overview-item" >
+                    <span>3</span>
+                    <div class="overview-info">
+                        <div>Shooting and Combat Mechanics</div>
+                        <div>Discover how to implement shooting mechanics and combat elements, such as characters shooting or hitting objects. This adds action-driven gameplay and introduces concepts like player objectives and score tracking.</div>
+                    </div>
+
+                </div>
+
+
+          
+                <div class="overview-item" >
+                    <span>4</span>
+                    <div class="overview-info">
+                        <div>Motion and Dodging</div>
+                        <div>Use motion blocks to create advanced movements, such as dodging obstacles or controlling flying objects. This introduces a dynamic challenge where timing and strategy are key to the gameplay.</div>
+                    </div>
+
+                </div>
+
+
+          
+                <div class="overview-item" >
+                    <span>5</span>
+                    <div class="overview-info">
+                        <div>Loops and Repetitive Actions</div>
+                        <div>Understand how to use loops to program repetitive actions, such as continuous object spawning or repeated interactions. Loops will be applied to create continuous gameplay elements that enhance the player experience.</div>
+                    </div>
+
+                </div>
+
+
+          
+            <div class="overview-item" >
+                <img src="images/icons/certificate-com.svg">
+                <div class="overview-info">
+                    <div>Certificate of completion available</div>
+                    <div>Earn a certificate of completion and showcase your accomplishment.</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+<div class="gray-section">
+    <div class="row-centered p-40 w100">
+        <div class="main-title-black text-center">Featured projects </div>
+
+        
+            <div>
+
+                          <div class="project-title">Save The Dragon!</div>
+                <div class="featured-project">
+
+                    <picture style='background-image: url("data/uploaded_files/Dragon1_id_2553.gif")'></picture>
+
+                </div>
+
+
+
+                        </div>
+        
+            <div>
+
+                          <div class="project-title">Highway Cats</div>
+                <div class="featured-project">
+
+                    <picture style='background-image: url("data/uploaded_files/cats_id_2554.gif")'></picture>
+
+                </div>
+
+
+
+                        </div>
+        
+            <div>
+
+                          <div class="project-title">Avoid The Lines</div>
+                <div class="featured-project">
+
+                    <picture style='background-image: url("data/uploaded_files/avoidthelines_id_2555.gif")'></picture>
+
+                </div>
+
+
+
+                        </div>
+        
+
+
+
+
+    </div>
+</div>
+
+<div class="padding-50" >
+    <div class="main-title-black text-center">Related Courses</div>
+    <div class="sep"></div>
+
+    <div class="course-package">
+
+                    <a href="../8/Basics-Of-Scratch" class="course-item">
+                <div class="circle"></div>
+                <div class="course-detail">
+                    <img src="data/course_package/8.png" alt="">
+                    <div class="label">   <h3>Basics Of Scratch</h3></div>
+                    <div class="highlights">
+                        <div>
+                            <span>Level</span>
+                            <span>Primary</span>
+                        </div>
+                        <div>
+                            <span>Suitable for</span>
+                            <span>grade 4-7</span>
+                        </div>
+                        <div>
+                            <span>Course Length</span>
+                            <span>15 hrs </span>
+                        </div>
+                        <div>
+                            <span>Timeframe</span>
+                            <span>Quarter</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="sample-btn">View Course</button>
+
+            </a>
+                    <a href="../9/Game-development-with-Scratch-Level-I" class="course-item">
+                <div class="circle"></div>
+                <div class="course-detail">
+                    <img src="data/course_package/9.png" alt="">
+                    <div class="label">   <h3>Game development with Scratch: Level I</h3></div>
+                    <div class="highlights">
+                        <div>
+                            <span>Level</span>
+                            <span>Primary</span>
+                        </div>
+                        <div>
+                            <span>Suitable for</span>
+                            <span>grade 4-7</span>
+                        </div>
+                        <div>
+                            <span>Course Length</span>
+                            <span>20 hrs </span>
+                        </div>
+                        <div>
+                            <span>Timeframe</span>
+                            <span>Semester</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="sample-btn">View Course</button>
+
+            </a>
+                    <a href="../10/Advanced-Game-Programming-With-Scratch-Level-III" class="course-item">
+                <div class="circle"></div>
+                <div class="course-detail">
+                    <img src="data/course_package/10.png" alt="">
+                    <div class="label">   <h3>Advanced Game Programming With Scratch: Level III</h3></div>
+                    <div class="highlights">
+                        <div>
+                            <span>Level</span>
+                            <span>Primary</span>
+                        </div>
+                        <div>
+                            <span>Suitable for</span>
+                            <span>grade 4-7</span>
+                        </div>
+                        <div>
+                            <span>Course Length</span>
+                            <span>46 hrs </span>
+                        </div>
+                        <div>
+                            <span>Timeframe</span>
+                            <span>Semester</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="sample-btn">View Course</button>
+
+            </a>
+                    <a href="../17/Introduction-to-Coding-Logic" class="course-item">
+                <div class="circle"></div>
+                <div class="course-detail">
+                    <img src="data/course_package/17.png" alt="">
+                    <div class="label">   <h3>Introduction to Coding Logic</h3></div>
+                    <div class="highlights">
+                        <div>
+                            <span>Level</span>
+                            <span>Primary</span>
+                        </div>
+                        <div>
+                            <span>Suitable for</span>
+                            <span>grade 1-3</span>
+                        </div>
+                        <div>
+                            <span>Course Length</span>
+                            <span>25 hrs </span>
+                        </div>
+                        <div>
+                            <span>Timeframe</span>
+                            <span>Semester</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="sample-btn">View Course</button>
+
+            </a>
+            </div>
+
+</div>
+
+
+
+
+
+
+
+<?php
+include '../../footer.php';
+?>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src=""
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
