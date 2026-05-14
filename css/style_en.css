@@ -1,0 +1,2051 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  direction: ltr;
+}
+
+* {
+  outline: none;
+  /* text-align: left; */
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; 
+  scroll-padding-bottom: 60px; 
+}
+@media (max-width: 992px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    scroll-padding-bottom: 100px;
+  }
+}
+
+
+a, a:active, a:link, a:hover, a *, a:active *, a:link *, a:hover * {
+  text-decoration: none;
+}
+
+.sep {
+  display: block;
+  clear: both;
+  height: 20px;
+  width: 100% !important;
+}
+
+.lesson-items .lesson-item, .lesson-items .practice-item, .quiz-section .quiz_question .rightIcon, .quiz-section .quiz_question .wrongIcon, .quiz-section .quiz_question .quiz_add, .quiz-section .quiz_question .quiz_nbr, .quiz-section .quiz_grade, .practice-section .dd-match-area .dd-match-to, .quiz-section .dd-match-area .dd-match-to, .practice-section .dd-match-area, .quiz-section .dd-match-area, .practice-section .dd-match-item, .quiz-section .dd-match-item, .gray-input a, .gray-input-block a, .flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.color-black {
+  color: #000 !important;
+}
+.color-black * {
+  color: #000 !important;
+}
+
+.w-500px {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.w-90 {
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+}
+
+.h-45px {
+  height: 45px;
+  line-height: 30px;
+}
+
+.w-200px {
+  width: 200px !important;
+}
+
+.margin-0-10px {
+  margin: 0 10px;
+}
+
+.margin-b-0 {
+  margin-bottom: 0px !important;
+}
+
+.w-750px {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  position: relative;
+}
+
+.page-container {
+  width: 100%;
+  max-width: calc(100% - 100px);
+  margin: auto;
+}
+
+
+.section-title {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  margin: 10px 0 30px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.section-text {
+  text-align: center;
+  width: 60%;
+  font-size: 16px;
+  margin: 10px auto 30px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.section-title-small {
+ 
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  margin: 10px 0 20px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.section-title-smaller {
+ 
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin: 10px 0 20px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.width-unset {
+  width: unset !important;
+}
+
+.separator-box {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.col-50 {
+  max-width: 50%;
+  flex-basis: 50%;
+  padding: 0 15px;
+}
+
+.p_relative {
+  position: relative;
+}
+
+.quiz-sections {
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.orange-btn-rounded {
+ 
+  border-radius: 40px;
+  height: unset !important;
+  padding: 15px 30px;
+  border: 1px solid #FD673A;
+  background-color: #FD673A;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+}
+.orange-btn-rounded:hover {
+  background-color: rgba(253, 103, 58, 0.7);
+}
+
+.books-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.books-section a {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.books-section a:hover {
+  transform: scale(1.1);
+}
+.books-section a .book-title {
+ 
+  color: #fff;
+  width: 50%;
+  margin-left: 15px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 16px;
+  margin-bottom: 20px;
+  /* Add a darker background color */
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.lesson-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.lesson-section a {
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+.lesson-section a picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lesson-section a picture span {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #7C7C7D;
+  color: #fff;
+  font-weight: 500;
+}
+.lesson-section a picture span i {
+  margin: 0 10px;
+}
+.lesson-section a:hover {
+  transform: scale(1.1);
+}
+.lesson-section a.locked-lesson {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+.lesson-section a.locked-lesson h3 {
+  color: #7C7C7D !important;
+}
+
+.page-title {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  margin: 0 0 30px;
+  color: rgba(0, 0, 0, 0.85);
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 3%;
+}
+.back-btn img {
+  width: 40px;
+  height: 40px;
+}
+.back-btn:hover {
+  transform: scale(1.1);
+}
+
+.section-text {
+ 
+  text-align: center;
+  width: 60%;
+  font-size: 16px;
+  margin: 10px auto 30px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.section-title-small {
+ 
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  margin: 10px 0 20px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.section-title-smaller {
+ 
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin: 10px 0 20px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.page-body {
+  position: relative;
+}
+.page-body .page-content {
+  padding: 30px;
+}
+@media (max-width: 800px) {
+  .page-body .page-content {
+    padding: 15px;
+  }
+}
+
+.page-body-inner {
+  position: relative;
+  margin-top: 75px;
+  min-height: 500px;
+  width: 100%;
+}
+.page-body-inner .page-content {
+  padding: 30px;
+}
+@media (max-width: 800px) {
+  .page-body-inner .page-content {
+    padding: 15px;
+  }
+}
+
+.page-body-inner2 {
+  position: relative;
+  margin-top: 75px;
+  width: 100%;
+}
+.page-body-inner2 .page-content {
+  padding: 30px;
+}
+@media (max-width: 800px) {
+  .page-body-inner2 .page-content {
+    padding: 15px;
+  }
+}
+
+.page-body-inner3 {
+  position: relative;
+  margin-top: 75px;
+  min-height: 500px;
+  background-color: #f3efef;
+  width: 100%;
+}
+.page-body-inner3 .page-content {
+  padding: 30px;
+}
+@media (max-width: 800px) {
+  .page-body-inner3 .page-content {
+    padding: 15px;
+  }
+}
+
+.grid-pattern-1 {
+  display: flex;
+}
+@media (max-width: 800px) {
+  .grid-pattern-1 {
+    flex-wrap: wrap;
+  }
+}
+.grid-pattern-1 .left {
+  margin-right: 15px;
+}
+@media (max-width: 800px) {
+  .grid-pattern-1 .left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.grid-pattern-1 .right {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+@media (max-width: 800px) {
+  .grid-pattern-1 .right {
+    width: 100%;
+  }
+}
+
+.side-menu, .side-menu2, .side-menu3 {
+  width: calc(100% - 30px);
+}
+.side-menu ul, .side-menu2 ul, .side-menu3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.side-menu ul h2, .side-menu2 ul h2, .side-menu3 ul h2 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.side-menu ul li, .side-menu2 ul li, .side-menu3 ul li {
+  background-color: #E5E5E5;
+  width: 100%;
+  margin-bottom: 7px;
+  padding: 10px 15px;
+}
+.side-menu ul li a, .side-menu2 ul li a, .side-menu3 ul li a {
+  display: block;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+}
+.side-menu ul li.selected, .side-menu2 ul li.selected, .side-menu3 ul li.selected {
+  background-color: rgba(253, 95, 0, 0.8);
+}
+.side-menu ul li.selected a, .side-menu2 ul li.selected a, .side-menu3 ul li.selected a {
+  color: #fff;
+}
+.side-menu ul li.selected:hover, .side-menu2 ul li.selected:hover, .side-menu3 ul li.selected:hover {
+  background-color: rgba(253, 95, 0, 0.6);
+}
+.side-menu ul li:hover, .side-menu2 ul li:hover, .side-menu3 ul li:hover {
+  background-color: rgba(253, 95, 0, 0.8);
+}
+.side-menu ul li:hover a, .side-menu2 ul li:hover a, .side-menu3 ul li:hover a {
+  color: #fff;
+}
+
+.side-menu {
+  width: 230px !important;
+}
+.side-menu ul li {
+  border-radius: 5px;
+}
+.side-menu ul li a i {
+  margin-right: 10px;
+  text-align: center;
+}
+.side-menu.hidden_menu {
+  width: unset !important;
+}
+.side-menu.hidden_menu ul li a {
+  text-align: center;
+  padding: 5px 0 !important;
+}
+.side-menu.hidden_menu ul li a span {
+  display: none;
+}
+.side-menu.hidden_menu ul li a i {
+  margin-right: 0 !important;
+}
+.side-menu .hide_menu i:nth-of-type(2) {
+  display: none;
+}
+.side-menu .hide_menu.hidden_icon i:nth-of-type(1) {
+  display: none;
+}
+.side-menu .hide_menu.hidden_icon i:nth-of-type(2) {
+  display: block;
+}
+
+.unselectable {
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.gray-input-block {
+  display: block !important;
+}
+.gray-input-block .grades-section {
+  width: 60%;
+}
+.gray-input-block .grade-item {
+  font-weight: 500;
+  color: #000;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.gray-input, .gray-input-block {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 100%;
+  max-width: 70%;
+  margin: 10px auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.gray-input div, .gray-input-block div {
+  font-weight: 500;
+}
+.gray-input div:nth-of-type(1), .gray-input-block div:nth-of-type(1) {
+  color: rgba(0, 0, 0, 0.6);
+  width: 130px;
+}
+.gray-input div:nth-of-type(2), .gray-input-block div:nth-of-type(2) {
+  color: #000;
+}
+.gray-input a, .gray-input-block a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+}
+
+.t-select-menu-list {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.t-select-menu-list .select2-container .select2-selection--single {
+  height: 40px !important;
+}
+.t-select-menu-list .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #444;
+  line-height: 40px !important;
+}
+.t-select-menu-list .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 40px;
+  width: 30px;
+}
+
+.t-menu-list {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.t-menu-list a {
+ 
+  font-weight: 300;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 12px;
+  text-align: center;
+  padding: 4px 7px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.t-menu-list a.selected {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.practice-section .bg_image, .quiz-section .bg_image {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 800px;
+  height: auto;
+  margin: auto;
+}
+.practice-section .no-display, .quiz-section .no-display {
+  display: none;
+}
+.practice-section .question-section, .quiz-section .question-section {
+  z-index: 1;
+  padding: 15px;
+  background-color: rgba(248, 248, 248, 0.85);
+  border-radius: 7px;
+  width: 100%;
+  max-width: 90%;
+  margin: 40px auto 20px auto;
+  text-align: left;
+}
+.practice-section .question-section *, .quiz-section .question-section * {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+.practice-section .answer-section, .quiz-section .answer-section {
+  z-index: 1;
+  padding: 25px 20px;
+  background-color: rgba(248, 248, 248, 0.85);
+  border-radius: 7px;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto 40px auto;
+}
+.practice-section .question_option_area, .practice-section .drag-area, .practice-section .drop-area, .quiz-section .question_option_area, .quiz-section .drag-area, .quiz-section .drop-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.practice-section .question_option_area .question_option, .practice-section .question_option_area .question_option_img, .practice-section .question_option_area .sort-item-text, .practice-section .question_option_area .sort-item-img, .practice-section .question_option_area .drag-drop-option-text, .practice-section .question_option_area .drag-drop-option-img, .practice-section .question_option_area .dd-match-item, .practice-section .question_option_area .dd-match-item-img, .practice-section .drag-area .question_option, .practice-section .drag-area .question_option_img, .practice-section .drag-area .sort-item-text, .practice-section .drag-area .sort-item-img, .practice-section .drag-area .drag-drop-option-text, .practice-section .drag-area .drag-drop-option-img, .practice-section .drag-area .dd-match-item, .practice-section .drag-area .dd-match-item-img, .practice-section .drop-area .question_option, .practice-section .drop-area .question_option_img, .practice-section .drop-area .sort-item-text, .practice-section .drop-area .sort-item-img, .practice-section .drop-area .drag-drop-option-text, .practice-section .drop-area .drag-drop-option-img, .practice-section .drop-area .dd-match-item, .practice-section .drop-area .dd-match-item-img, .quiz-section .question_option_area .question_option, .quiz-section .question_option_area .question_option_img, .quiz-section .question_option_area .sort-item-text, .quiz-section .question_option_area .sort-item-img, .quiz-section .question_option_area .drag-drop-option-text, .quiz-section .question_option_area .drag-drop-option-img, .quiz-section .question_option_area .dd-match-item, .quiz-section .question_option_area .dd-match-item-img, .quiz-section .drag-area .question_option, .quiz-section .drag-area .question_option_img, .quiz-section .drag-area .sort-item-text, .quiz-section .drag-area .sort-item-img, .quiz-section .drag-area .drag-drop-option-text, .quiz-section .drag-area .drag-drop-option-img, .quiz-section .drag-area .dd-match-item, .quiz-section .drag-area .dd-match-item-img, .quiz-section .drop-area .question_option, .quiz-section .drop-area .question_option_img, .quiz-section .drop-area .sort-item-text, .quiz-section .drop-area .sort-item-img, .quiz-section .drop-area .drag-drop-option-text, .quiz-section .drop-area .drag-drop-option-img, .quiz-section .drop-area .dd-match-item, .quiz-section .drop-area .dd-match-item-img {
+  padding: 10px;
+  margin-right: 10px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.practice-section .question_option_area .question_option .pinyin, .practice-section .question_option_area .question_option_img .pinyin, .practice-section .question_option_area .sort-item-text .pinyin, .practice-section .question_option_area .sort-item-img .pinyin, .practice-section .question_option_area .drag-drop-option-text .pinyin, .practice-section .question_option_area .drag-drop-option-img .pinyin, .practice-section .question_option_area .dd-match-item .pinyin, .practice-section .question_option_area .dd-match-item-img .pinyin, .practice-section .drag-area .question_option .pinyin, .practice-section .drag-area .question_option_img .pinyin, .practice-section .drag-area .sort-item-text .pinyin, .practice-section .drag-area .sort-item-img .pinyin, .practice-section .drag-area .drag-drop-option-text .pinyin, .practice-section .drag-area .drag-drop-option-img .pinyin, .practice-section .drag-area .dd-match-item .pinyin, .practice-section .drag-area .dd-match-item-img .pinyin, .practice-section .drop-area .question_option .pinyin, .practice-section .drop-area .question_option_img .pinyin, .practice-section .drop-area .sort-item-text .pinyin, .practice-section .drop-area .sort-item-img .pinyin, .practice-section .drop-area .drag-drop-option-text .pinyin, .practice-section .drop-area .drag-drop-option-img .pinyin, .practice-section .drop-area .dd-match-item .pinyin, .practice-section .drop-area .dd-match-item-img .pinyin, .quiz-section .question_option_area .question_option .pinyin, .quiz-section .question_option_area .question_option_img .pinyin, .quiz-section .question_option_area .sort-item-text .pinyin, .quiz-section .question_option_area .sort-item-img .pinyin, .quiz-section .question_option_area .drag-drop-option-text .pinyin, .quiz-section .question_option_area .drag-drop-option-img .pinyin, .quiz-section .question_option_area .dd-match-item .pinyin, .quiz-section .question_option_area .dd-match-item-img .pinyin, .quiz-section .drag-area .question_option .pinyin, .quiz-section .drag-area .question_option_img .pinyin, .quiz-section .drag-area .sort-item-text .pinyin, .quiz-section .drag-area .sort-item-img .pinyin, .quiz-section .drag-area .drag-drop-option-text .pinyin, .quiz-section .drag-area .drag-drop-option-img .pinyin, .quiz-section .drag-area .dd-match-item .pinyin, .quiz-section .drag-area .dd-match-item-img .pinyin, .quiz-section .drop-area .question_option .pinyin, .quiz-section .drop-area .question_option_img .pinyin, .quiz-section .drop-area .sort-item-text .pinyin, .quiz-section .drop-area .sort-item-img .pinyin, .quiz-section .drop-area .drag-drop-option-text .pinyin, .quiz-section .drop-area .drag-drop-option-img .pinyin, .quiz-section .drop-area .dd-match-item .pinyin, .quiz-section .drop-area .dd-match-item-img .pinyin {
+  font-size: 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.78);
+  margin-bottom: 5px;
+}
+.practice-section .question_option_area .question_option .q_item, .practice-section .question_option_area .question_option_img .q_item, .practice-section .question_option_area .sort-item-text .q_item, .practice-section .question_option_area .sort-item-img .q_item, .practice-section .question_option_area .drag-drop-option-text .q_item, .practice-section .question_option_area .drag-drop-option-img .q_item, .practice-section .question_option_area .dd-match-item .q_item, .practice-section .question_option_area .dd-match-item-img .q_item, .practice-section .drag-area .question_option .q_item, .practice-section .drag-area .question_option_img .q_item, .practice-section .drag-area .sort-item-text .q_item, .practice-section .drag-area .sort-item-img .q_item, .practice-section .drag-area .drag-drop-option-text .q_item, .practice-section .drag-area .drag-drop-option-img .q_item, .practice-section .drag-area .dd-match-item .q_item, .practice-section .drag-area .dd-match-item-img .q_item, .practice-section .drop-area .question_option .q_item, .practice-section .drop-area .question_option_img .q_item, .practice-section .drop-area .sort-item-text .q_item, .practice-section .drop-area .sort-item-img .q_item, .practice-section .drop-area .drag-drop-option-text .q_item, .practice-section .drop-area .drag-drop-option-img .q_item, .practice-section .drop-area .dd-match-item .q_item, .practice-section .drop-area .dd-match-item-img .q_item, .quiz-section .question_option_area .question_option .q_item, .quiz-section .question_option_area .question_option_img .q_item, .quiz-section .question_option_area .sort-item-text .q_item, .quiz-section .question_option_area .sort-item-img .q_item, .quiz-section .question_option_area .drag-drop-option-text .q_item, .quiz-section .question_option_area .drag-drop-option-img .q_item, .quiz-section .question_option_area .dd-match-item .q_item, .quiz-section .question_option_area .dd-match-item-img .q_item, .quiz-section .drag-area .question_option .q_item, .quiz-section .drag-area .question_option_img .q_item, .quiz-section .drag-area .sort-item-text .q_item, .quiz-section .drag-area .sort-item-img .q_item, .quiz-section .drag-area .drag-drop-option-text .q_item, .quiz-section .drag-area .drag-drop-option-img .q_item, .quiz-section .drag-area .dd-match-item .q_item, .quiz-section .drag-area .dd-match-item-img .q_item, .quiz-section .drop-area .question_option .q_item, .quiz-section .drop-area .question_option_img .q_item, .quiz-section .drop-area .sort-item-text .q_item, .quiz-section .drop-area .sort-item-img .q_item, .quiz-section .drop-area .drag-drop-option-text .q_item, .quiz-section .drop-area .drag-drop-option-img .q_item, .quiz-section .drop-area .dd-match-item .q_item, .quiz-section .drop-area .dd-match-item-img .q_item {
+  font-size: 20px;
+  text-align: center;
+}
+.practice-section .question_option_area .question_option.selected, .practice-section .question_option_area .question_option_img.selected, .practice-section .question_option_area .sort-item-text.selected, .practice-section .question_option_area .sort-item-img.selected, .practice-section .question_option_area .drag-drop-option-text.selected, .practice-section .question_option_area .drag-drop-option-img.selected, .practice-section .question_option_area .dd-match-item.selected, .practice-section .question_option_area .dd-match-item-img.selected, .practice-section .drag-area .question_option.selected, .practice-section .drag-area .question_option_img.selected, .practice-section .drag-area .sort-item-text.selected, .practice-section .drag-area .sort-item-img.selected, .practice-section .drag-area .drag-drop-option-text.selected, .practice-section .drag-area .drag-drop-option-img.selected, .practice-section .drag-area .dd-match-item.selected, .practice-section .drag-area .dd-match-item-img.selected, .practice-section .drop-area .question_option.selected, .practice-section .drop-area .question_option_img.selected, .practice-section .drop-area .sort-item-text.selected, .practice-section .drop-area .sort-item-img.selected, .practice-section .drop-area .drag-drop-option-text.selected, .practice-section .drop-area .drag-drop-option-img.selected, .practice-section .drop-area .dd-match-item.selected, .practice-section .drop-area .dd-match-item-img.selected, .quiz-section .question_option_area .question_option.selected, .quiz-section .question_option_area .question_option_img.selected, .quiz-section .question_option_area .sort-item-text.selected, .quiz-section .question_option_area .sort-item-img.selected, .quiz-section .question_option_area .drag-drop-option-text.selected, .quiz-section .question_option_area .drag-drop-option-img.selected, .quiz-section .question_option_area .dd-match-item.selected, .quiz-section .question_option_area .dd-match-item-img.selected, .quiz-section .drag-area .question_option.selected, .quiz-section .drag-area .question_option_img.selected, .quiz-section .drag-area .sort-item-text.selected, .quiz-section .drag-area .sort-item-img.selected, .quiz-section .drag-area .drag-drop-option-text.selected, .quiz-section .drag-area .drag-drop-option-img.selected, .quiz-section .drag-area .dd-match-item.selected, .quiz-section .drag-area .dd-match-item-img.selected, .quiz-section .drop-area .question_option.selected, .quiz-section .drop-area .question_option_img.selected, .quiz-section .drop-area .sort-item-text.selected, .quiz-section .drop-area .sort-item-img.selected, .quiz-section .drop-area .drag-drop-option-text.selected, .quiz-section .drop-area .drag-drop-option-img.selected, .quiz-section .drop-area .dd-match-item.selected, .quiz-section .drop-area .dd-match-item-img.selected {
+  border: 2px solid #FF8427;
+  background-color: #FFDBBF;
+}
+.practice-section .question_option_area .question_option.right-answer, .practice-section .question_option_area .question_option_img.right-answer, .practice-section .question_option_area .sort-item-text.right-answer, .practice-section .question_option_area .sort-item-img.right-answer, .practice-section .question_option_area .drag-drop-option-text.right-answer, .practice-section .question_option_area .drag-drop-option-img.right-answer, .practice-section .question_option_area .dd-match-item.right-answer, .practice-section .question_option_area .dd-match-item-img.right-answer, .practice-section .drag-area .question_option.right-answer, .practice-section .drag-area .question_option_img.right-answer, .practice-section .drag-area .sort-item-text.right-answer, .practice-section .drag-area .sort-item-img.right-answer, .practice-section .drag-area .drag-drop-option-text.right-answer, .practice-section .drag-area .drag-drop-option-img.right-answer, .practice-section .drag-area .dd-match-item.right-answer, .practice-section .drag-area .dd-match-item-img.right-answer, .practice-section .drop-area .question_option.right-answer, .practice-section .drop-area .question_option_img.right-answer, .practice-section .drop-area .sort-item-text.right-answer, .practice-section .drop-area .sort-item-img.right-answer, .practice-section .drop-area .drag-drop-option-text.right-answer, .practice-section .drop-area .drag-drop-option-img.right-answer, .practice-section .drop-area .dd-match-item.right-answer, .practice-section .drop-area .dd-match-item-img.right-answer, .quiz-section .question_option_area .question_option.right-answer, .quiz-section .question_option_area .question_option_img.right-answer, .quiz-section .question_option_area .sort-item-text.right-answer, .quiz-section .question_option_area .sort-item-img.right-answer, .quiz-section .question_option_area .drag-drop-option-text.right-answer, .quiz-section .question_option_area .drag-drop-option-img.right-answer, .quiz-section .question_option_area .dd-match-item.right-answer, .quiz-section .question_option_area .dd-match-item-img.right-answer, .quiz-section .drag-area .question_option.right-answer, .quiz-section .drag-area .question_option_img.right-answer, .quiz-section .drag-area .sort-item-text.right-answer, .quiz-section .drag-area .sort-item-img.right-answer, .quiz-section .drag-area .drag-drop-option-text.right-answer, .quiz-section .drag-area .drag-drop-option-img.right-answer, .quiz-section .drag-area .dd-match-item.right-answer, .quiz-section .drag-area .dd-match-item-img.right-answer, .quiz-section .drop-area .question_option.right-answer, .quiz-section .drop-area .question_option_img.right-answer, .quiz-section .drop-area .sort-item-text.right-answer, .quiz-section .drop-area .sort-item-img.right-answer, .quiz-section .drop-area .drag-drop-option-text.right-answer, .quiz-section .drop-area .drag-drop-option-img.right-answer, .quiz-section .drop-area .dd-match-item.right-answer, .quiz-section .drop-area .dd-match-item-img.right-answer {
+  border: 2px solid #27CC00;
+  background-color: #D2F2D4 !important;
+}
+.practice-section .question_option_area .question_option.wrong-answer, .practice-section .question_option_area .question_option_img.wrong-answer, .practice-section .question_option_area .sort-item-text.wrong-answer, .practice-section .question_option_area .sort-item-img.wrong-answer, .practice-section .question_option_area .drag-drop-option-text.wrong-answer, .practice-section .question_option_area .drag-drop-option-img.wrong-answer, .practice-section .question_option_area .dd-match-item.wrong-answer, .practice-section .question_option_area .dd-match-item-img.wrong-answer, .practice-section .drag-area .question_option.wrong-answer, .practice-section .drag-area .question_option_img.wrong-answer, .practice-section .drag-area .sort-item-text.wrong-answer, .practice-section .drag-area .sort-item-img.wrong-answer, .practice-section .drag-area .drag-drop-option-text.wrong-answer, .practice-section .drag-area .drag-drop-option-img.wrong-answer, .practice-section .drag-area .dd-match-item.wrong-answer, .practice-section .drag-area .dd-match-item-img.wrong-answer, .practice-section .drop-area .question_option.wrong-answer, .practice-section .drop-area .question_option_img.wrong-answer, .practice-section .drop-area .sort-item-text.wrong-answer, .practice-section .drop-area .sort-item-img.wrong-answer, .practice-section .drop-area .drag-drop-option-text.wrong-answer, .practice-section .drop-area .drag-drop-option-img.wrong-answer, .practice-section .drop-area .dd-match-item.wrong-answer, .practice-section .drop-area .dd-match-item-img.wrong-answer, .quiz-section .question_option_area .question_option.wrong-answer, .quiz-section .question_option_area .question_option_img.wrong-answer, .quiz-section .question_option_area .sort-item-text.wrong-answer, .quiz-section .question_option_area .sort-item-img.wrong-answer, .quiz-section .question_option_area .drag-drop-option-text.wrong-answer, .quiz-section .question_option_area .drag-drop-option-img.wrong-answer, .quiz-section .question_option_area .dd-match-item.wrong-answer, .quiz-section .question_option_area .dd-match-item-img.wrong-answer, .quiz-section .drag-area .question_option.wrong-answer, .quiz-section .drag-area .question_option_img.wrong-answer, .quiz-section .drag-area .sort-item-text.wrong-answer, .quiz-section .drag-area .sort-item-img.wrong-answer, .quiz-section .drag-area .drag-drop-option-text.wrong-answer, .quiz-section .drag-area .drag-drop-option-img.wrong-answer, .quiz-section .drag-area .dd-match-item.wrong-answer, .quiz-section .drag-area .dd-match-item-img.wrong-answer, .quiz-section .drop-area .question_option.wrong-answer, .quiz-section .drop-area .question_option_img.wrong-answer, .quiz-section .drop-area .sort-item-text.wrong-answer, .quiz-section .drop-area .sort-item-img.wrong-answer, .quiz-section .drop-area .drag-drop-option-text.wrong-answer, .quiz-section .drop-area .drag-drop-option-img.wrong-answer, .quiz-section .drop-area .dd-match-item.wrong-answer, .quiz-section .drop-area .dd-match-item-img.wrong-answer {
+  border: 2px solid #FF5252;
+  background-color: #FFBABA;
+}
+.practice-section .question_option_area .question_option:hover, .practice-section .question_option_area .question_option_img:hover, .practice-section .question_option_area .sort-item-text:hover, .practice-section .question_option_area .sort-item-img:hover, .practice-section .question_option_area .drag-drop-option-text:hover, .practice-section .question_option_area .drag-drop-option-img:hover, .practice-section .question_option_area .dd-match-item:hover, .practice-section .question_option_area .dd-match-item-img:hover, .practice-section .drag-area .question_option:hover, .practice-section .drag-area .question_option_img:hover, .practice-section .drag-area .sort-item-text:hover, .practice-section .drag-area .sort-item-img:hover, .practice-section .drag-area .drag-drop-option-text:hover, .practice-section .drag-area .drag-drop-option-img:hover, .practice-section .drag-area .dd-match-item:hover, .practice-section .drag-area .dd-match-item-img:hover, .practice-section .drop-area .question_option:hover, .practice-section .drop-area .question_option_img:hover, .practice-section .drop-area .sort-item-text:hover, .practice-section .drop-area .sort-item-img:hover, .practice-section .drop-area .drag-drop-option-text:hover, .practice-section .drop-area .drag-drop-option-img:hover, .practice-section .drop-area .dd-match-item:hover, .practice-section .drop-area .dd-match-item-img:hover, .quiz-section .question_option_area .question_option:hover, .quiz-section .question_option_area .question_option_img:hover, .quiz-section .question_option_area .sort-item-text:hover, .quiz-section .question_option_area .sort-item-img:hover, .quiz-section .question_option_area .drag-drop-option-text:hover, .quiz-section .question_option_area .drag-drop-option-img:hover, .quiz-section .question_option_area .dd-match-item:hover, .quiz-section .question_option_area .dd-match-item-img:hover, .quiz-section .drag-area .question_option:hover, .quiz-section .drag-area .question_option_img:hover, .quiz-section .drag-area .sort-item-text:hover, .quiz-section .drag-area .sort-item-img:hover, .quiz-section .drag-area .drag-drop-option-text:hover, .quiz-section .drag-area .drag-drop-option-img:hover, .quiz-section .drag-area .dd-match-item:hover, .quiz-section .drag-area .dd-match-item-img:hover, .quiz-section .drop-area .question_option:hover, .quiz-section .drop-area .question_option_img:hover, .quiz-section .drop-area .sort-item-text:hover, .quiz-section .drop-area .sort-item-img:hover, .quiz-section .drop-area .drag-drop-option-text:hover, .quiz-section .drop-area .drag-drop-option-img:hover, .quiz-section .drop-area .dd-match-item:hover, .quiz-section .drop-area .dd-match-item-img:hover {
+  opacity: 0.7;
+}
+.practice-section .question_option_area .correct, .practice-section .question_option_area .incorrect, .practice-section .drag-area .correct, .practice-section .drag-area .incorrect, .practice-section .drop-area .correct, .practice-section .drop-area .incorrect, .quiz-section .question_option_area .correct, .quiz-section .question_option_area .incorrect, .quiz-section .drag-area .correct, .quiz-section .drag-area .incorrect, .quiz-section .drop-area .correct, .quiz-section .drop-area .incorrect {
+  width: 50px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.practice-section .question_option_area .question_option_img, .practice-section .drag-area .question_option_img, .practice-section .drop-area .question_option_img, .quiz-section .question_option_area .question_option_img, .quiz-section .drag-area .question_option_img, .quiz-section .drop-area .question_option_img {
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.practice-section .question_option_area .question_option_img img, .practice-section .drag-area .question_option_img img, .practice-section .drop-area .question_option_img img, .quiz-section .question_option_area .question_option_img img, .quiz-section .drag-area .question_option_img img, .quiz-section .drop-area .question_option_img img {
+  width: 90%;
+  text-align: center;
+}
+.practice-section .drag-area .sort-item-text, .quiz-section .drag-area .sort-item-text {
+  width: 70px;
+  height: 70px;
+}
+.practice-section .drag-area .sort-item-text .pinyin, .quiz-section .drag-area .sort-item-text .pinyin {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+.practice-section .drag-area .sort-item-text .q_item, .quiz-section .drag-area .sort-item-text .q_item {
+  color: #fff !important;
+}
+.practice-section .drag-area .sort-item-img, .quiz-section .drag-area .sort-item-img {
+  width: 120px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.practice-section .drag-drop-option-text, .quiz-section .drag-drop-option-text {
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  cursor: unset;
+  margin-right: 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 10px rgba(38, 17, 111, 0.18);
+  box-shadow: 0 10px 10px rgba(38, 17, 111, 0.18);
+}
+.practice-section .drag-drop-option-text .pinyin, .quiz-section .drag-drop-option-text .pinyin {
+  font-size: 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.78);
+  margin-bottom: 5px;
+}
+.practice-section .drag-drop-option-text .q_item, .quiz-section .drag-drop-option-text .q_item {
+  font-size: 20px;
+  text-align: center;
+}
+.practice-section .drag-drop-option-img, .quiz-section .drag-drop-option-img {
+  width: 120px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.practice-section .dd-match-item, .quiz-section .dd-match-item {
+  width: 120px;
+  height: 120px;
+}
+.practice-section .dd-match-item .pinyin, .quiz-section .dd-match-item .pinyin {
+  font-size: 13px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.78) !important;
+  margin-bottom: 5px;
+}
+.practice-section .dd-match-item .q_item, .quiz-section .dd-match-item .q_item {
+  font-size: 18px !important;
+  text-align: center;
+  color: #fff;
+}
+.practice-section .dd-match-item-img, .quiz-section .dd-match-item-img {
+  width: 120px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.practice-section .dd-match-area, .quiz-section .dd-match-area {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 7px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 10px rgba(38, 17, 111, 0.18);
+  box-shadow: 0 10px 10px rgba(38, 17, 111, 0.18);
+}
+.practice-section .dd-match-area .drop-area-item, .quiz-section .dd-match-area .drop-area-item {
+  width: 125px !important;
+  height: 125px !important;
+}
+.practice-section .dd-match-area .dd-match-to, .quiz-section .dd-match-area .dd-match-to {
+  width: 125px;
+  height: 125px;
+}
+.practice-section .drop-area .drop-area-item, .quiz-section .drop-area .drop-area-item {
+  width: 75px;
+  height: 75px;
+  background-color: #ebebeb;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.practice-section .drop-area .drop-area-item i, .quiz-section .drop-area .drop-area-item i {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.practice-section .drop-area .drop-area-item .draggable, .quiz-section .drop-area .drop-area-item .draggable {
+  margin: 0 !important;
+}
+.practice-section .drop-area .drop-area-item .draggable *, .quiz-section .drop-area .drop-area-item .draggable * {
+  color: #fff !important;
+}
+.practice-section .drop-area .drop-area-item .dd-match-item-img, .quiz-section .drop-area .drop-area-item .dd-match-item-img {
+  background-size: contain !important;
+}
+.practice-section .drop-area .drag_drop .draggable, .quiz-section .drop-area .drag_drop .draggable {
+  margin: 0 !important;
+  background: #fff;
+}
+.practice-section .drop-area .drag_drop .draggable *, .quiz-section .drop-area .drag_drop .draggable * {
+  color: #000 !important;
+}
+.practice-section .drop-area .drop-area-item-img, .quiz-section .drop-area .drop-area-item-img {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.practice-section .drop-area .drop-area-item-img .draggable, .quiz-section .drop-area .drop-area-item-img .draggable {
+  margin: 0 !important;
+  width: 115px;
+  height: 115px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.practice-section .drop-area .drop-area-item-img img, .quiz-section .drop-area .drop-area-item-img img {
+  width: 90%;
+  text-align: center;
+}
+.practice-section .check-btn, .practice-section .check-btn2, .quiz-section .check-btn, .quiz-section .check-btn2 {
+  cursor: pointer;
+  width: 100%;
+  max-width: 100px;
+  padding: 10px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  border: none;
+  display: block;
+  margin: 50px auto;
+}
+.practice-section .check-btn2, .quiz-section .check-btn2 {
+  margin: 10px !important;
+  width: unset !important;
+  max-width: unset !important;
+  padding: 10px;
+}
+.practice-section .result, .quiz-section .result {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.practice-section .result.correct, .quiz-section .result.correct {
+  color: #27CC00;
+}
+.practice-section .result.not-correct, .quiz-section .result.not-correct {
+  color: #FF5252;
+}
+.practice-section .result .try-again, .quiz-section .result .try-again {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #000;
+}
+.practice-section .result .next, .quiz-section .result .next {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #000;
+}
+
+.paper-pattern {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  position: relative;
+  width: 100%;
+  max-width: 92% !important;
+  margin: auto;
+}
+.paper-pattern:before, .paper-pattern:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  z-index: -1;
+}
+.paper-pattern:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-0.45deg);
+}
+.paper-pattern:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.06deg);
+}
+
+.wrongAnswer {
+  background-color: #f6dcdc !important;
+}
+
+.RightAnswer {
+  background-color: #e7f8e7 !important;
+}
+
+.quiz-section {
+  padding: 30px;
+  width: 100%;
+  position: relative;
+  max-width: 900px !important;
+  margin: auto;
+}
+.quiz-section .quiz_grade {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px auto;
+  background-image: url("../images/round.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.quiz-section .quiz_grade span {
+  font-family: "Delicious Handrawn", cursive;
+  font-size: 40px;
+  color: #FB4400;
+  margin: 0 5px;
+}
+.quiz-section .quiz_question {
+  background-color: #f5f4f4;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 7px;
+  position: relative;
+}
+.quiz-section .quiz_question .quiz_nbr {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.quiz-section .quiz_question .quiz_nbr span {
+  font-size: 16px;
+  color: #fff;
+}
+.quiz-section .quiz_question .quiz_add {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.quiz-section .quiz_question .rightIcon, .quiz-section .quiz_question .wrongIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.quiz-section .quiz_question .rightIcon i, .quiz-section .quiz_question .wrongIcon i {
+  color: #fff;
+}
+.quiz-section .quiz_question .none {
+  display: none;
+}
+.quiz-section .quiz_question .wrongIcon {
+  background-color: #df2424;
+}
+.quiz-section .quiz_question .rightIcon {
+  background-color: #23d21a;
+}
+.quiz-section .quiz_question .instruction {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 auto 30px auto;
+  width: 85%;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+.quiz-section .quiz_question .instruction * {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 !important;
+  text-align: center;
+ 
+}
+
+.fieldsLinker select {
+  display: none;
+}
+.fieldsLinker div {
+  text-align: center;
+}
+.fieldsLinker li i {
+  display: none;
+}
+.fieldsLinker span {
+  color: rgba(0, 0, 0, 0.7);
+}
+.fieldsLinker .FL-left ul {
+  padding: 0;
+}
+.fieldsLinker .FL-left ul li {
+  position: relative;
+}
+.fieldsLinker .FL-left ul li:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 46%;
+  border-radius: 50%;
+  right: -8px;
+  background-color: #0895F4;
+}
+.fieldsLinker .FL-right ul {
+  padding: 0;
+}
+.fieldsLinker .FL-right ul li {
+  position: relative;
+}
+.fieldsLinker .FL-right ul li:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  left: -8px;
+  background-color: #8ABFC0;
+}
+
+.book-slide {
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+}
+.book-slide .book-page {
+  height: auto;
+  margin: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.page-select {
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.select2-container--default .select2-selection--single {
+  display: flex;
+  height: 40px;
+  justify-content: center !important;
+  align-items: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 35px;
+}
+
+.lesson-area {
+  position: relative;
+}
+.lesson-area .page-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+.lesson-area .page-nav a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+.lesson-area .page-nav a.active {
+  font-weight: bold;
+  color: #337ab7;
+}
+.lesson-area .nav-prev-book, .lesson-area .nav-next-book {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+.lesson-area .nav-prev-book img, .lesson-area .nav-next-book img {
+  width: 130px;
+  height: 170px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.lesson-area .nav-prev-book {
+  margin-right: 10px;
+  left: -20%;
+}
+.lesson-area .nav-next-book {
+  margin-left: 10px;
+  right: -20%;
+}
+.lesson-area .owl-prev.disabled {
+  display: none;
+}
+.lesson-area .owl-next.disabled {
+  display: none;
+}
+
+.lesson-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 750px;
+  margin: auto;
+}
+.lesson-items .lesson-item, .lesson-items .practice-item {
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: #ff6347;
+}
+.lesson-items .lesson-item p, .lesson-items .practice-item p {
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+.lesson-items .lesson-item p.textsmall, .lesson-items .practice-item p.textsmall {
+  font-size: 18px !important;
+  margin-bottom: 5px;
+}
+.lesson-items .lesson-item i, .lesson-items .practice-item i {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+.lesson-items .lesson-item:hover, .lesson-items .practice-item:hover {
+  transform: scale(1.1);
+  background-color: #ffae42; /* change background color on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.lesson-items .lesson-item:hover i, .lesson-items .practice-item:hover i {
+  font-size: 24px; /* make i bigger on hover */
+}
+.lesson-items .lesson-item.selected, .lesson-items .practice-item.selected {
+  transform: scale(1.1);
+  background-color: #ffae42; /* change background color on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.lesson-items .lesson-item.selected i, .lesson-items .practice-item.selected i {
+  font-size: 24px; /* make i bigger on hover */
+}
+.lesson-items .practice-item {
+  flex-wrap: wrap;
+  background-color: #0a9396;
+}
+.lesson-items .practice-item .practice-info {
+  width: 100%;
+  max-width: 100px;
+  margin: auto;
+  font-size: 14px;
+  text-align: center;
+}
+.lesson-items .practice-item img {
+  width: 30px;
+}
+.lesson-items .practice-item span {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 5px;
+}
+.lesson-items .practice-item:hover {
+  background-color: #94d2bd;
+}
+.lesson-items .practice-item:hover img {
+  width: 50px;
+}
+
+.audio-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 750px;
+  margin: auto;
+}
+.audio-area .audio-player {
+  margin-bottom: 25px;
+  width: calc(50% - 25px);
+}
+.audio-area .audio-player div {
+  text-align: center;
+  width: 100%;
+}
+.audio-area .audio-player audio {
+  width: 100%;
+  border: 1.2px solid #ff6347;
+  border-radius: 50px;
+  box-shadow: 1px 1px 10px #ff6347;
+}
+
+.quizzes_section .quiz-item-section {
+  position: relative;
+  margin-bottom: 15px;
+}
+.quizzes_section .quiz-item-section .quiz-grade-section {
+  list-style: none;
+  margin-top: 2px;
+  background-color: rgba(255, 99, 71, 0.17);
+  color: #000;
+  padding: 10px 0 20px 30px;
+}
+.quizzes_section .quiz-item-section .quiz-grade-section li {
+  margin-bottom: 5px;
+}
+.quizzes_section .quiz-item-section .quiz-grade-section li.title {
+  font-weight: 500;
+}
+.quizzes_section .quiz-item-section .quiz-grade-section li input[type=checkbox] {
+  margin-left: 40px;
+}
+.quizzes_section .quiz-item-section .quiz-grade-section li .lock2 span:before {
+  background: #FFF;
+}
+.quizzes_section .quiz-item-section .quiz-grade-section li .lock2 span:after {
+  background: #e6d2d2 !important;
+}
+.quizzes_section .quiz-item-section .quiz-grade-section li .lock2 input:checked + span:before {
+  background-color: rgba(253, 95, 0, 0.8) !important;
+}
+.quizzes_section .quiz_item {
+  width: 100%;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 99, 71, 0.1);
+  color: #000;
+}
+.quizzes_section .quiz_item .exam_logo {
+  width: 50px;
+  margin-right: 10px;
+}
+.quizzes_section .quiz_item .exam_info .exam_name {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.quizzes_section .quiz_item .exam_info div {
+  font-weight: 300;
+  font-size: 14px;
+}
+.quizzes_section .quiz_item .exam_info div b {
+  text-transform: capitalize;
+  color: #ff6347;
+}
+.quizzes_section .delete {
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  color: #000;
+  opacity: 0.8;
+}
+.quizzes_section .export {
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  color: #000;
+  opacity: 0.8;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 750px;
+  -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+  -moz-box-shadow: 4px 4px 14px #4f4f4f;
+  box-shadow: 4px 4px 14px #4f4f4f;
+  border: 5px inset #ddd;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.form-control2 input[type=text], .form-control2 input[type=password], .form-control2 input[type=email], .form-control2 input[type=date], .form-control2 input[type=month], .form-control2 input[type=number], .form-control2 select {
+  padding: 10px 15px;
+  height: 45px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.form-control1 input[type=text], .form-control1 input[type=password], .form-control1 input[type=email], .form-control1 input[type=date], .form-control1 input[type=month], .form-control1 input[type=number], .form-control1 select {
+  padding: 10px 15px;
+  height: 45px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.form-control1 textarea {
+  height: 150px;
+  padding: 10px 15px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.form-control1 label {
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  display: block;
+}
+.form-control1 label {
+  position: relative;
+  width: 70px;
+  height: 35px;
+  cursor: pointer;
+}
+.form-control1 .label2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: block;
+  width: 100% !important;
+}
+.form-control1 label input {
+  position: relative;
+  z-index: 1;
+  appearance: none;
+}
+.form-control1 label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 80px;
+  transition: 0.5s;
+}
+.form-control1 label input:checked ~ span {
+  background: #ff6347;
+  box-shadow: 0 5px 10px #ff6347;
+}
+.form-control1 label span i {
+  position: absolute;
+  top: 2.5px;
+  left: 4px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.form-control1 label input:checked ~ span i {
+  left: 35px;
+}
+
+.lock-section {
+  margin-left: 20px;
+}
+.lock-section .lock, .lock-section .lock2 {
+  width: 100% !important;
+}
+
+.lessons-permissions-section, .lock-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.lessons-permissions-section .lock2 span:after, .lock-section .lock2 span:after {
+  background-image: unset !important;
+}
+.lessons-permissions-section .lock, .lessons-permissions-section .lock2, .lock-section .lock, .lock-section .lock2 {
+  width: calc(33.3333333333% - 10px);
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+  height: 32px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (max-width: 1100px) and (min-width: 801px) {
+  .lessons-permissions-section .lock, .lessons-permissions-section .lock2, .lock-section .lock, .lock-section .lock2 {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 800px) {
+  .lessons-permissions-section .lock, .lessons-permissions-section .lock2, .lock-section .lock, .lock-section .lock2 {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 550px) {
+  .lessons-permissions-section .lock, .lessons-permissions-section .lock2, .lock-section .lock, .lock-section .lock2 {
+    width: calc(100% - 10px);
+  }
+}
+.lessons-permissions-section .lock input, .lessons-permissions-section .lock2 input, .lock-section .lock input, .lock-section .lock2 input {
+  display: none;
+}
+.lessons-permissions-section .lock span, .lessons-permissions-section .lock2 span, .lock-section .lock span, .lock-section .lock2 span {
+  font-size: 14px;
+}
+.lessons-permissions-section .lock span:before,
+.lessons-permissions-section .lock span:after, .lessons-permissions-section .lock2 span:before,
+.lessons-permissions-section .lock2 span:after, .lock-section .lock span:before,
+.lock-section .lock span:after, .lock-section .lock2 span:before,
+.lock-section .lock2 span:after {
+  content: "";
+}
+.lessons-permissions-section .lock span:before, .lessons-permissions-section .lock2 span:before, .lock-section .lock span:before, .lock-section .lock2 span:before {
+  width: 54px;
+  height: 28px;
+  margin-right: 8px;
+  background: #EEE;
+  border-radius: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.lessons-permissions-section .lock span:after, .lessons-permissions-section .lock2 span:after, .lock-section .lock span:after, .lock-section .lock2 span:after {
+  margin: 2px;
+  width: 24px;
+  height: 24px;
+  background: #FFF;
+  border-radius: 28px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB6ElEQVRYR+3XS8gPURjH8c8bkYV7KVslC4US5RJhgWKDQsnCJZcFWcrCJVkqioVsZOG+eDdvLJAkJJKVkr1EIQu3okfnXy/9Z+bMO8O/5OxmznP5nud35pxn+vR49A0hf/gsxHJMSf4vcQP38L1OzLoA83AaswqSPMFuPMyFqAOwBWcwrCL4N2zDuRyIXIDV6EfYf8IJXMDz9G4aNmEPRiQZVmGgCiIHYAxeYBLeYRmi1N3GHNzEaLzCVHwsg8gB2IfjKchmnK9Y1VacTTZ7cbIpQOzs+XiDyQiNy0ZI8BpjcReLmgJ8SCW9jpVVmqb5kGEp3mNcU4DOd30Z6zMBrmFNsi2VuWwySrkEsfIY96v0HAQX+2Zuel6BW/jaDb4IYCLuYHrmiqvMnmFx+op+sS0COIb9VVFrzh/C4d99igCuYF3NBFXmF7ExF+Aq1lZFrDl/CRv+A7RZgUfpdoyYOzG7QpJWJYjk0ZR8SUlH4kFJnxBmrQJsH3ThdBa+KzUrRYX44wDRCZ0qkaFVgMdYgM8p4agkwYy/BRB5nqZNGIfZDpQlb30P1DyDfpq3KsG/D9Dzy+goDgylziU+B3Ek9ygej9uY2RJEtPGdHjGrIQmj4amjndAQ4m3qjrt20zn/BQ3zl7v3HOAHddxjIRWQtfEAAAAASUVORK5CYII=);
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.lessons-permissions-section .lock input:checked + span:after, .lessons-permissions-section .lock2 input:checked + span:after, .lock-section .lock input:checked + span:after, .lock-section .lock2 input:checked + span:after {
+  left: 26px;
+  background-image: none;
+}
+.lessons-permissions-section .lock input:checked + span:before, .lessons-permissions-section .lock2 input:checked + span:before, .lock-section .lock input:checked + span:before, .lock-section .lock2 input:checked + span:before {
+  background-color: rgba(253, 95, 0, 0.8);
+}
+
+.tables-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.tables-area .table-default {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.14);
+}
+.tables-area .table-default * {
+  font-size: 14px;
+}
+.tables-area .table-scroll {
+  max-height: 500px; /* Just for the demo          */
+  overflow-y: auto; /* Trigger vertical scroll    */
+  overflow-x: hidden; /* Hide the horizontal scroll */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.14);
+}
+.tables-area .table-scroll * {
+  font-size: 14px;
+}
+.tables-area .table-scroll::-webkit-scrollbar-thumb {
+  background: #cdeef7;
+  border-radius: 10px;
+}
+.tables-area .user-detail2 {
+  width: 100% !important;
+}
+.tables-area .table-info {
+  width: 100% !important;
+}
+.tables-area .table-info table tbody tr:nth-child(odd) {
+  background: #f4f8fc !important;
+}
+.tables-area .table-info table td a {
+  color: #000 !important;
+}
+.tables-area .table-info table td a:hover {
+  color: #000 !important;
+}
+.tables-area .table-info table td a.bold {
+  font-weight: 600;
+}
+.tables-area .user-detail, .tables-area .user-detail2, .tables-area .table-info {
+  width: calc(100% - 150px);
+}
+@media (max-width: 800px) {
+  .tables-area .user-detail, .tables-area .user-detail2, .tables-area .table-info {
+    width: calc(100% - 40px);
+    margin: auto;
+  }
+}
+.tables-area .user-detail table, .tables-area .user-detail2 table, .tables-area .table-info table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tables-area .user-detail th, .tables-area .user-detail2 th, .tables-area .table-info th {
+  padding: 10px 15px;
+  text-transform: capitalize;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.tables-area .user-detail th select, .tables-area .user-detail2 th select, .tables-area .table-info th select {
+  padding: 5px;
+  width: 100%;
+}
+.tables-area .user-detail td, .tables-area .user-detail2 td, .tables-area .table-info td {
+  padding: 10px 15px;
+  width: 150px;
+  height: 40px;
+}
+.tables-area .user-detail td .submitted, .tables-area .user-detail2 td .submitted, .tables-area .table-info td .submitted {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: green;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+.tables-area .user-detail td .not-viewed, .tables-area .user-detail2 td .not-viewed, .tables-area .table-info td .not-viewed {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: darkred;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+.tables-area .user-detail td .opened, .tables-area .user-detail2 td .opened, .tables-area .table-info td .opened {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: darkblue;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+.tables-area .user-detail td div, .tables-area .user-detail2 td div, .tables-area .table-info td div {
+  text-transform: capitalize;
+  font-size: inherit;
+}
+.tables-area .user-detail td a, .tables-area .user-detail2 td a, .tables-area .table-info td a {
+  color: orangered;
+}
+.tables-area .user-detail td a:hover, .tables-area .user-detail2 td a:hover, .tables-area .table-info td a:hover {
+  color: orange;
+}
+.tables-area .user-detail td a.bold, .tables-area .user-detail2 td a.bold, .tables-area .table-info td a.bold {
+  font-weight: 600;
+}
+.tables-area .user-detail .status, .tables-area .user-detail2 .status, .tables-area .table-info .status {
+  display: flex;
+  align-items: center;
+  width: 100% !important;
+}
+.tables-area .user-detail tbody tr:nth-child(odd), .tables-area .user-detail2 tbody tr:nth-child(odd), .tables-area .table-info tbody tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.table-info {
+  width: 100% !important;
+}
+.table-info table th {
+  color: #000;
+  font-size: 16px;
+ 
+}
+.table-info table tbody tr:nth-child(odd) {
+  background: #f4f8fc !important;
+}
+.table-info table tbody tr:nth-child(even) {
+  background: rgba(215, 218, 222, 0.77) !important;
+}
+.table-info table td {
+  padding: 10px;
+}
+.table-info table td a {
+  color: #000 !important;
+}
+.table-info table td a:hover {
+  color: #000 !important;
+}
+.table-info table td a.bold {
+  font-weight: 600;
+}
+
+.dashboard-info-2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dashboard-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.dashboard-info .chart-box-white {
+  margin-right: 15px;
+}
+
+.dashboard-card {
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  width: calc(25% - 20px);
+}
+.dashboard-card .card-title {
+  font-size: 15px;
+ 
+  font-weight: 500;
+  max-width: calc(100% - 40px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #fff !important;
+  margin-bottom: 12px;
+}
+.dashboard-card .card-subtitle {
+  font-size: 30px;
+ 
+  line-height: 40px;
+  font-weight: 900;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #fff;
+  margin-bottom: 7px;
+  margin-top: 10px;
+}
+.dashboard-card select {
+  height: 37px;
+  margin-top: 25px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+.dashboard-card h4 {
+  font-size: 17px;
+
+  max-width: calc(100% - 40px);
+  font-weight: 700;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.dashboard-card h3 {
+  font-size: 30px;
+  
+  line-height: 40px;
+  font-weight: 900;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #fff;
+  margin-bottom: 7px;
+  margin-top: 10px;
+}
+.dashboard-card.blue {
+  background-color: #2D3F51;
+}
+.dashboard-card.blue .icon {
+  background-color: #718496;
+}
+.dashboard-card.blue-gradient {
+  background: linear-gradient(90deg, hsl(200, 70%, 50%) 0%, hsl(160, 70%, 50%) 100%);
+  background: -moz-linear-gradient(90deg, hsl(200, 70%, 50%) 0%, hsl(160, 70%, 50%) 100%);
+  background: -webkit-linear-gradient(90deg, hsl(200, 70%, 50%) 0%, hsl(160, 70%, 50%) 100%);
+}
+.dashboard-card.blue-gradient .icon {
+  background-color: #20dbdb;
+}
+.dashboard-card.purple-gradient {
+  background: linear-gradient(90deg, hsl(200, 70%, 50%) 0%, hsl(300, 40%, 50%) 100%);
+  background: -moz-linear-gradient(90deg, hsl(200, 70%, 50%) 0%, hsl(300, 40%, 50%) 100%);
+  background: -webkit-linear-gradient(90deg, hsl(200, 70%, 50%) 0%, hsl(300, 40%, 50%) 100%);
+}
+.dashboard-card.purple-gradient .icon {
+  background-color: #9995d6;
+}
+.dashboard-card.orange-gradient {
+  background: linear-gradient(90deg, hsl(30, 100%, 50%) 0%, hsl(40, 100%, 50%) 100%);
+  background: -moz-linear-gradient(90deg, hsl(30, 100%, 50%) 0%, hsl(40, 100%, 50%) 100%);
+  background: -webkit-linear-gradient(90deg, hsl(30, 100%, 50%) 0%, hsl(40, 100%, 50%) 100%);
+}
+.dashboard-card.orange-gradient .icon {
+  background-color: #f7d0a0;
+}
+.dashboard-card.light-blue {
+  background-color: #AADEEE;
+}
+.dashboard-card.light-blue .icon {
+  background-color: #63cbeb;
+}
+.dashboard-card.gray-color {
+  background-color: #BBBBBB;
+}
+.dashboard-card.gray-color .icon {
+  background-color: #AAAAAA;
+}
+.dashboard-card.gray-color-light {
+  background-color: #fefefe;
+}
+.dashboard-card.gray-color-light .card-title {
+  color: #000 !important;
+}
+.dashboard-card.gray-color-light .icon {
+  background-color: #AAAAAA;
+}
+.dashboard-card.orange {
+  background: #F39C12;
+}
+.dashboard-card.orange .icon {
+  background-color: #f7c87c;
+}
+.dashboard-card.green {
+  background: hsl(127, 41%, 69%);
+  background: linear-gradient(90deg, hsl(127, 41%, 69%) 0%, hsl(152, 81%, 59%) 100%);
+  background: -moz-linear-gradient(90deg, hsl(127, 41%, 69%) 0%, hsl(152, 81%, 59%) 100%);
+  background: -webkit-linear-gradient(90deg, hsl(127, 41%, 69%) 0%, hsl(152, 81%, 59%) 100%);
+}
+.dashboard-card.green .icon {
+  background-color: hsl(127, 41%, 69%);
+}
+.dashboard-card.red {
+  background: hsl(2, 41%, 69%);
+  background: linear-gradient(90deg, hsl(2, 41%, 69%) 0%, hsl(5, 81%, 59%) 100%);
+  background: -moz-linear-gradient(90deg, hsl(2, 41%, 69%) 0%, hsl(5, 81%, 59%) 100%);
+  background: -webkit-linear-gradient(90deg, hsl(2, 41%, 69%) 0%, hsl(5, 81%, 59%) 100%);
+}
+.dashboard-card.red .icon {
+  background-color: hsl(2, 41%, 69%);
+}
+.dashboard-card .icon {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.dashboard-card .icon i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.dashboard-card:hover .icon {
+  transform: scale(0.9) translatey(5px);
+}
+
+.histogram-charts2 {
+  width: calc(100% - 0px);
+}
+
+.histogram-charts {
+  width: calc(75% - 20px);
+}
+
+.chart-box-white {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 5px rgba(38, 17, 111, 0.18);
+  box-shadow: 0 5px 5px rgba(38, 17, 111, 0.18);
+}
+.chart-box-white .chart-title {
+  font-weight: 600;
+}
+.chart-box-white .chart-title-small-center {
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.chart-box-white .chart-subtitle {
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.chart-box-white.c100 {
+  width: calc(100% - 10px);
+}
+.chart-box-white.c50 {
+  width: calc(50% - 10px);
+}
+.chart-box-white.c25 {
+  width: calc(25% - 10px);
+}
+.chart-box-white.h350 {
+  height: 350px;
+}
+.chart-box-white a {
+  font-size: 13px;
+  color: royalblue;
+  font-weight: 400;
+}
+.chart-box-white .mb7 {
+  margin-bottom: 7px;
+}
+
+.chart-content {
+  padding: 5px;
+  background-color: #f9f9f9;
+  width: 100px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 2px #ccc;
+}
+.chart-content header {
+  text-align: center;
+}
+
+.chart-legend {
+  font-size: 0.8em;
+}
+.chart-legend li {
+  list-style: none;
+}
+.chart-legend li span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+}
+
+.pie {
+  --p:20;
+  --b:22px;
+  --c:darkred;
+  --w:120px;
+  --f:25px;
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  margin: 5px;
+  place-content: center;
+  font-size: var(--f);
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.pie:before,
+.pie:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.pie:before {
+  inset: 0;
+  background: radial-gradient(farthest-side, var(--c) 98%, rgba(0, 0, 0, 0)) top/var(--b) var(--b) no-repeat, conic-gradient(var(--c) calc(var(--p) * 1%), rgba(0, 0, 0, 0) 0);
+  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie:after {
+  inset: calc(50% - var(--b) / 2);
+  background: var(--c);
+  transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w) / 2));
+}
+
+.animate {
+  animation: p 1s 0.5s both;
+}
+
+.no-round:before {
+  background-size: 0 0, auto;
+}
+
+.no-round:after {
+  content: none;
+}
+
+@keyframes p {
+  from {
+    --p:0;
+  }
+}
+.dashboard-grade-list {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  width: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-top: -5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Added transition */
+  z-index: 9999999;
+}
+
+.dashboard-grade-list.visible {
+  max-height: 200px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dashboard-grade-list li a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+.dashboard-grade-list li a.selected {
+  background-color: #f0f0f0;
+}
+
+.dashboard-grade-list li:last-child {
+  border-bottom: none;
+}
+
+.dashboard-grade-list li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hide scrollbar */
+.dashboard-grade-list::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard-grade-list {
+  scrollbar-width: none;
+}
+
+.dashboard-grade-list::-webkit-scrollbar-track {
+  display: none;
+}
+
+.dashboard-grade-list::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.notification-alert {
+  text-align: center;
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.notification-alert.orange {
+  background-color: #f4d2be;
+  border: 1px solid #fd5f00;
+}
+
+.retake-quiz-form, .iframe-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.retake-quiz-form .label1, .iframe-form .label1 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+.retake-quiz-form .label2, .iframe-form .label2 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.retake-quiz-form form, .iframe-form form {
+  padding: 20px;
+  width: 100%;
+}
+.retake-quiz-form form select, .iframe-form form select {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  display: block;
+  margin-bottom: 20px;
+}
+.retake-quiz-form form input[type=submit], .iframe-form form input[type=submit] {
+  margin-top: 15px;
+  display: block;
+  cursor: pointer;
+  color: #fff;
+  background-color: #fd5f00;
+  padding: 7px 15px;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.iframe-form {
+  display: block !important;
+}
+.iframe-form input[type=text] {
+  width: calc(100% - 20px);
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=style_en.css.map */
