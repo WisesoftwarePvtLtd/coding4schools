@@ -1,0 +1,53 @@
+# =========================
+# Scratch .sb3 FULL FIX
+# =========================
+
+# Enable CORS
+#Header set Access-Control-Allow-Origin "*"
+#Header set Access-Control-Allow-Methods "GET, OPTIONS"
+#Header set Access-Control-Allow-Headers "Content-Type"
+
+# Correct MIME type
+#AddType application/zip .sb3
+
+# Prevent forced download (important)
+#<FilesMatch "\.sb3$">
+   # ForceType application/zip
+    #Header set Content-Disposition "inline"
+#</FilesMatch>
+
+# Disable caching (Scratch sometimes breaks with cache)
+#<FilesMatch "\.sb3$">
+ #   Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+#</FilesMatch>
+
+# =========================
+# Scratch .sb3 FULL FIX
+# =========================
+
+<IfModule mod_headers.c>
+
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Origin, Content-Type, Accept"
+
+</IfModule>
+
+# Correct MIME type
+AddType application/zip .sb3
+
+# Prevent forced download
+<FilesMatch "\.sb3$">
+    ForceType application/zip
+    Header set Content-Disposition "inline"
+</FilesMatch>
+
+# Disable caching
+<FilesMatch "\.sb3$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+</FilesMatch>
+
+# Handle OPTIONS requests
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]

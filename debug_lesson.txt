@@ -1,0 +1,40 @@
+Array
+(
+    [lesson_type] => lesson
+    [course_id] => 109
+    [book_name] => Codey Rocky
+    [lesson_name] => lesson1
+    [lesson_sort_order] => 6
+)
+
+
+Array
+(
+    [lesson] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [lesson_plan_pdf] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [presentation_ppt] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
