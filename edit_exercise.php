@@ -269,9 +269,14 @@ function renderInstruction($code)
                                     7. Remove <code>?view-mode=preview</code> from the copied link
 
                                 </div>
-
+                     <?php
+                            
+                            if (isset($exerciselink['arduino']) && !empty($exerciselink['arduino'])) {
+                                $url = $exerciselink['arduino'];
+                            }
+                    ?>
                                 <input type="text" id="arduinoLink" placeholder="Paste Arduino project link here"
-                                    class="form-control">
+                                    class="form-control" value="<?php echo htmlspecialchars($url) ?>">
                             </div>
 
                             <textarea name="answer" id="editorAnswer"
