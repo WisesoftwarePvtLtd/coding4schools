@@ -17,6 +17,9 @@ $exercisequery = mysqli_query($conn, "
 $exercisedata = mysqli_fetch_assoc($exercisequery);
 //If exercise has a link to the code, then the link is stored as a json
 $exerciselink = json_decode($exercisedata['code'], true);
+if (isset($exerciselink['trinket']) && !empty($exerciselink['trinket'])) {
+    $trinketurl = $exerciselink['trinket'];
+}
 
 $instrquery = mysqli_query(
     $conn,
@@ -226,6 +229,10 @@ function renderInstruction($code)
                                     <!-- <iframe id="scratchFrame"
                                         src="makeymakey/build/index.html?project_url=<?= $encodedUrl ?>" width="100%"
                                         height="800" style="border:none;"></iframe> -->
+                                <?php } elseif ($exercisedata['editor_type'] === "trinket" { ?>
+                                         <iframe id="editorFrame" src="<?php echo $trinketurl?>"
+                                        style="width:100%; height:1200px; border:1px solid #ccc;overflow:hidden;"
+                                        scrolling="no"></iframe>  
                                 <?php } else { ?>
                                     <iframe id="editorFrame"
                                         style="width:100%; height:1200px; border:1px solid #ccc;overflow:hidden;"
@@ -246,9 +253,7 @@ function renderInstruction($code)
                                 </div>
                     <?php
                             
-                            if (isset($exerciselink['trinket']) && !empty($exerciselink['trinket'])) {
-                                $trinketurl = $exerciselink['trinket'];
-                            }
+                            
                     ?>
                                 <input type="text" id="trinketLink" placeholder="Paste your Trinket link here"
                                     class="form-control" value="<?php echo htmlspecialchars($trinketurl) ?>">
