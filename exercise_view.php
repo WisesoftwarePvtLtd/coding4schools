@@ -6,7 +6,6 @@ include 'config.php';
 /* =========================
    GET EXERCISE
 ========================= */
-
 $userRole = $_SESSION['LoggedInUserRoles'] ?? '';
 $exercise_id = intval($_GET['exercise_id'] ?? 0);
 $lesson_id = intval($_GET['lesson_id'] ?? 0);
@@ -72,6 +71,7 @@ $stmt = $conn->prepare("
         e.exercise_id,
         e.exercise_name,
         ed.editor_url,
+		ed.editor_type,
         e.exercise_discription,
         e.sprite_image,
         e.instruction_guideline,
@@ -635,6 +635,12 @@ $stmt->close();
         .next-right {
     margin-left: auto;
 }
+		.editor-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
     </style>
     <script>
         function copyText(text) {
@@ -734,12 +740,33 @@ $stmt->close();
             $encodedUrl = rawurlencode($projectUrl); ?>
             <iframe id="scratchFrame" src="makeymakey/build/index.html?project_url=<?= $encodedUrl ?>" width="100%"
                 height="800" style="border:none;"></iframe>
-
-        <?php } else { ?>
-            <?php if (!in_array($exercise['editor_name'], $allowedEditors)): ?>
-                <iframe id="editorFrame" src="<?= htmlspecialchars($exercise['editor_url']) ?>?exercise_id=<?= $exercise_id ?>">
+		<?php } elseif ($exercise['editor_type'] === "trinket") {
+				$exerciselink = json_decode($exercise['code'], true);
+				if (isset($exerciselink['trinket']) && !empty($exerciselink['trinket'])) {
+					$trinketurl = $exerciselink['trinket'];
+				}
+		?>
+				<iframe id="editorFrame" src="<?= htmlspecialchars($trinketurl) ?>" style="display:block;">
                 </iframe>
-            <?php endif; ?>
+        <?php } else { ?>
+            <?php if (!in_array($exercise['editor_name'], $allowedEditors)){ ?>
+                <iframe id="editorFrame" src="<?= htmlspecialchars($exercise['editor_url']) ?>?exercise_id=<?= $exercise_id ?>" style="display:none;">
+                </iframe>
+				 <?php if (isset($exercise['editor_name']) && trim($exercise['editor_name']) === "Arduino GR12") { ?>
+
+						<div class="editor-box">
+							<button
+								type="button"
+								id="arduinoGr12Btn"
+								data-url="<?= htmlspecialchars($exercise['editor_url'] ?? '', ENT_QUOTES, 'UTF-8') ?>?exercise_id=<?= urlencode($exercise_id) ?>"
+								class="btn btn-primary"
+								style="display:none;">
+								🚀 ARDUINO GR12
+							</button>
+						</div>
+
+				<?php } ?>
+            <?php } ?>
         <?php } ?>
 
 
@@ -897,12 +924,39 @@ $stmt->close();
                 setTimeout(function () {
                     safeHideLoader();
                 }, 2000);
+				console.log('aj');
+				let sel = document.getElementById("editorFrame");
+               // let selectedOption = sel.options[sel.selectedIndex];
+                let url = sel.getAttribute("data-url");
+				console.log('aj',sel);
+				console.log('aj123',sel.getAttribute("src"));
+              
+
+                const btn = document.getElementById("arduinoGr12Btn");
+                btn.style.display = "inline-block";
+               
 
             } else {
                 // no iframe
                 safeHideLoader();
             }
         };
+		
+		
+		        const btns = document.getElementById("arduinoGr12Btn");
+
+btns.onclick = function () {
+    const urls = btns.dataset.url; // ya btn.getAttribute("data-url")
+
+    console.log("Opening URL:", urls);
+
+    if (urls) {
+        window.open(urls, "_blank", "noopener,noreferrer");
+    } else {
+        console.error("URL is empty!");
+    }
+};
+		
     </script>
 
 
@@ -1023,6 +1077,8 @@ $stmt->close();
             );
             assetModal.show();
         }
+		
+		 		
 
     </script>
 
