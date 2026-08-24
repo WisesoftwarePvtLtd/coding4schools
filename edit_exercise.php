@@ -229,7 +229,7 @@ function renderInstruction($code)
                                     <!-- <iframe id="scratchFrame"
                                         src="makeymakey/build/index.html?project_url=<?= $encodedUrl ?>" width="100%"
                                         height="800" style="border:none;"></iframe> -->
-                                <?php } elseif ($exercisedata['editor_type'] === "trinket" { ?>
+                                <?php } elseif ($exercisedata['editor_type'] === "trinket") { ?>
                                          <iframe id="editorFrame" src="<?php echo $trinketurl?>"
                                         style="width:100%; height:1200px; border:1px solid #ccc;overflow:hidden;"
                                         scrolling="no"></iframe>  
