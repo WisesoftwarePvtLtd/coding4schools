@@ -246,12 +246,12 @@ function renderInstruction($code)
                                 </div>
                     <?php
                             
-                            if (isset($exerciselink['arduino']) && !empty($exerciselink['arduino'])) {
-                                $url = $exerciselink['arduino'];
+                            if (isset($exerciselink['trinket']) && !empty($exerciselink['trinket'])) {
+                                $trinketurl = $exerciselink['trinket'];
                             }
                     ?>
                                 <input type="text" id="trinketLink" placeholder="Paste your Trinket link here"
-                                    class="form-control" value="<?php echo htmlspecialchars($url) ?>">
+                                    class="form-control" value="<?php echo htmlspecialchars($trinketurl) ?>">
                             </div>
 
                             <div id="arduinoBox" style="display:none; margin-top:10px;">
@@ -272,11 +272,11 @@ function renderInstruction($code)
                      <?php
                             
                             if (isset($exerciselink['arduino']) && !empty($exerciselink['arduino'])) {
-                                $url = $exerciselink['arduino'];
+                                $arduinourl = $exerciselink['arduino'];
                             }
                     ?>
                                 <input type="text" id="arduinoLink" placeholder="Paste Arduino project link here"
-                                    class="form-control" value="<?php echo htmlspecialchars($url) ?>">
+                                    class="form-control" value="<?php echo htmlspecialchars($arduinourl) ?>">
                             </div>
 
                             <textarea name="answer" id="editorAnswer"
