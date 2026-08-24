@@ -735,12 +735,11 @@ $stmt->close();
 
         <!-- <iframe id="editorFrame" src="<?= htmlspecialchars($exercise['editor_url']) ?>"></iframe> -->
         <?php if ($exercise['editor_name'] === "Scratch") {
-
             $projectUrl = BASE_URL . "" . $gameFile;
             $encodedUrl = rawurlencode($projectUrl); ?>
             <iframe id="scratchFrame" src="makeymakey/build/index.html?project_url=<?= $encodedUrl ?>" width="100%"
                 height="800" style="border:none;"></iframe>
-		<?php } elseif ($exercise['editor_type'] === "trinket") {
+		<?php } elseif($exercise['editor_type'] === "trinket") {
 				$exerciselink = json_decode($exercise['code'], true);
 				if (isset($exerciselink['trinket']) && !empty($exerciselink['trinket'])) {
 					$trinketurl = $exerciselink['trinket'];
@@ -748,13 +747,8 @@ $stmt->close();
 		?>
 				<iframe id="editorFrame" src="<?= htmlspecialchars($trinketurl) ?>" style="display:block;">
                 </iframe>
-        <?php } else { ?>
-            <?php if (!in_array($exercise['editor_name'], $allowedEditors)){ ?>
-                <iframe id="editorFrame" src="<?= htmlspecialchars($exercise['editor_url']) ?>?exercise_id=<?= $exercise_id ?>" style="display:none;">
-                </iframe>
-				 <?php if (isset($exercise['editor_name']) && trim($exercise['editor_name']) === "Arduino GR12") { ?>
-
-						<div class="editor-box">
+        <?php } elseif($exercise['editor_type'] === "arduinogr12") { ?>
+                <div class="editor-box">
 							<button
 								type="button"
 								id="arduinoGr12Btn"
@@ -763,11 +757,11 @@ $stmt->close();
 								style="display:none;">
 								🚀 ARDUINO GR12
 							</button>
-						</div>
-
-				<?php } ?>
-            <?php } ?>
-        <?php } ?>
+				</div>
+		<?php } elseif(!in_array($exercise['editor_name'], $allowedEditors)) { ?>
+				<iframe id="editorFrame" src="<?= htmlspecialchars($exercise['editor_url']) ?>?exercise_id=<?= $exercise_id ?>">
+                </iframe>
+		<?php } ?>
 
 
     </div>
@@ -900,47 +894,54 @@ $stmt->close();
     <script>
         window.onload = function () {
 
-            loadAssets('image');
+    loadAssets('image');
 
-            var iframe = document.querySelector(".editor-wrapper iframe");
-            var loaderHidden = false;
+    const iframe = document.querySelector(".editor-wrapper iframe");
+    let loaderHidden = false;
 
-            function safeHideLoader() {
-                if (!loaderHidden) {
-                    hideLoader();
-                    loaderHidden = true;
-                }
-            }
+    function safeHideLoader() {
+        if (!loaderHidden) {
+            hideLoader();
+            loaderHidden = true;
+        }
+    }
 
-            // ✅ iframe exists
-            if (iframe) {
+    // Handle iframe
+    if (iframe) {
 
-                // iframe onload
-                iframe.onload = function () {
-                    safeHideLoader();
-                };
+        iframe.onload = function () {
+            safeHideLoader();
+        };
 
-                // 🔥 fallback: iframe already loaded / event miss
-                setTimeout(function () {
-                    safeHideLoader();
-                }, 2000);
-				console.log('aj');
-				let sel = document.getElementById("editorFrame");
-               // let selectedOption = sel.options[sel.selectedIndex];
-                let url = sel.getAttribute("data-url");
-				console.log('aj',sel);
-				console.log('aj123',sel.getAttribute("src"));
-              
+        // Fallback if iframe load event doesn't fire
+        setTimeout(function () {
+            safeHideLoader();
+        }, 2000);
 
-                const btn = document.getElementById("arduinoGr12Btn");
-                btn.style.display = "inline-block";
-               
+    } else {
+        safeHideLoader();
+    }
 
+    // Arduino GR12 button exists only for Arduino GR12
+    const btn = document.getElementById("arduinoGr12Btn");
+
+    if (btn) {
+        btn.style.display = "inline-block";
+
+        btn.onclick = function () {
+
+            const url = btn.dataset.url;
+
+            console.log("Opening URL:", url);
+
+            if (url) {
+                window.open(url, "_blank", "noopener,noreferrer");
             } else {
-                // no iframe
-                safeHideLoader();
+                console.error("Arduino URL is empty!");
             }
         };
+    }
+};
 		
 		
 		        const btns = document.getElementById("arduinoGr12Btn");
