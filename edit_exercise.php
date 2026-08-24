@@ -15,6 +15,8 @@ $exercisequery = mysqli_query($conn, "
     WHERE e.exercise_id = $exercise_id
 ");
 $exercisedata = mysqli_fetch_assoc($exercisequery);
+//If exercise has a link to the code, then the link is stored as a json
+$exerciselink = json_decode($exercisedata['code'], true);
 
 $instrquery = mysqli_query(
     $conn,
@@ -242,9 +244,14 @@ function renderInstruction($code)
                                     4. Copy the link<br>
                                     5. Paste the link below
                                 </div>
-
+                    <?php
+                            
+                            if (isset($exerciselink['arduino']) && !empty($exerciselink['arduino'])) {
+                                $url = $exerciselink['arduino'];
+                            }
+                    ?>
                                 <input type="text" id="trinketLink" placeholder="Paste your Trinket link here"
-                                    class="form-control">
+                                    class="form-control" value="<?php echo htmlspecialchars($url) ?>">
                             </div>
 
                             <div id="arduinoBox" style="display:none; margin-top:10px;">
